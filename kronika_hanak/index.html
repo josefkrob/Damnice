@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hanákova kronika Damnic</title>
+<style>
+:root {
+  --bg:#0b0c10; --panel:#11131a; --text:#e7eaf0; --muted:#a8b0c2;
+  --link:#8ab4ff; --border:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+.layout{display:flex;min-height:100vh}
+aside{width:320px;flex:0 0 320px;background:var(--panel);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;padding:18px 14px;overflow:auto}
+.brand{padding:10px 10px 14px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.brand h1{font-size:18px;margin:0 0 6px}
+.brand p{margin:0;color:var(--muted);font-size:13px}
+.nav-link{display:block;padding:10px 10px;color:var(--text);text-decoration:none;border-radius:10px;border:1px solid transparent}
+.nav-link:hover{background:rgba(255,255,255,.04);border-color:var(--border)}
+.nav-link.active{background:rgba(138,180,255,.12);border-color:rgba(138,180,255,.30)}
+main{flex:1;padding:26px 22px 60px}
+.container{max-width:980px;margin:0 auto}
+header.hero{background:linear-gradient(180deg,rgba(138,180,255,.10),rgba(0,0,0,0));border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:18px}
+header.hero h2{margin:0 0 6px;font-size:24px}
+header.hero p{margin:0;color:var(--muted)}
+section{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:16px;padding:18px;margin:14px 0}
+section h2{margin-top:0;font-size:20px}
+p{margin:10px 0}
+ul{margin:10px 0 10px 20px}
+a{color:var(--link)}
+.footer-note{color:var(--muted);font-size:12px;margin-top:18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.g-item{margin:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.02)}
+.g-item img{width:100%;height:170px;object-fit:cover;display:block}
+.g-item figcaption{padding:8px 10px;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#lb{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);z-index:9999;padding:18px}
+#lb.open{display:flex}
+#lb img{max-width:min(1200px,96vw);max-height:88vh;border-radius:12px;border:1px solid rgba(255,255,255,.15)}
+#lb .hint{position:absolute;bottom:10px;left:10px;color:rgba(255,255,255,.75);font-size:12px}
+#lb button{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 10px;cursor:pointer}
+@media (max-width:920px){
+  aside{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);transition:.2s;z-index:999}
+  aside.open{transform:translateX(0)}
+  main{padding:18px 12px 60px}
+  .toggle{position:sticky;top:10px;z-index:998;display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:10px 12px;cursor:pointer}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside id="sidebar">
+    <div class="brand">
+      <h1>Hanákova kronika Damnic</h1>
+      <p>Jednostránkový web s kapitolami a fotogalerií.</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="#uvod">Úvod</a>
+<a class="nav-link" href="#uvod-dopis">Úvod. Dopis.</a>
+<a class="nav-link" href="#obec-damnice">Obec Damnice</a>
+<a class="nav-link" href="#pribeh-nebo-jeho-interpretace">Příběh nebo jeho interpretace:</a>
+<a class="nav-link" href="#nemci-nebo-cesi">Němci nebo Češi?</a>
+<a class="nav-link" href="#vyvlastneni-a-vysidleni">Vyvlastnění a vysídlení</a>
+<a class="nav-link" href="#prijezd-a-prijeti-v-nemecku">Příjezd a přijetí v Německu</a>
+<a class="nav-link" href="#historicke-souvislosti">Historické souvislosti</a>
+<a class="nav-link" href="#pout-do-maria-dreieichen">Pouť  do Maria Dreieichen!</a>
+<a class="nav-link" href="#setkani-rodaku-v-geislingenu-r-2000">Setkání  rodáku  v Geislingenu r. 2000</a>
+<a class="nav-link" href="#fotogalerie">Fotogalerie</a>
+    </nav>
+    <p class="footer-note">Tip: klikni na fotku v galerii pro zvětšení.</p>
+  </aside>
+
+  <main>
+    <div class="container">
+      <button class="toggle" id="toggleBtn" style="display:none">☰ Navigace</button>
+      <header class="hero">
+        <h2>Hanákova kronika Damnic</h2>
+        <p>Fotogalerie na konci obsahuje všechny fotografie z archivu (a navíc případné obrázky vložené přímo v dokumentu).</p>
+      </header>
+
+      <section id="uvod"><h2>Úvod</h2>
+
+</section>
+<section id="uvod-dopis"><h2>Úvod. Dopis.</h2>
+<p>Vážení čtenáři následujících článků</p>
+<p>Jmenuji se F.Bytešník a do Damnic jsme se přestěhovali s manželkou Miroslavou v roce 2014 s cílem užít si důchodový věk v klidu, v přírodě a mimo velkoměsto. Je přirozené, že když trvale změníte prostředí k životu, snažíte se sžít se s novým prostředím, sousedy v ulici, vesnicí a pochopit historií místa, kde žijete.</p>
+<p>Věděli jsme, že v Damnicích, jako součásti Sudet, došlo po roce 1945 k úplné výměně obyvatelstva po vysídlení od 13-tého století zde žijící komunity sudetských Němců. I náš domek č.p.4 byl kdysi ve třicátých letech dvacátého století postaven a obydlen německy hovořící rodinou s dětmi, po roce 1945 vysídlenou. Nyní zde žijeme jako čtvrtá generace nových osadníků od roku 1946. Historii našeho domku nám převyprávěl před několika lety p.Pelikán (pocházel z rodiny prvních přesídlenců do Damnic, do domu č.p.4)).</p>
+<p>Je přirozené, že jsme si kladli otázky, jak zde lidé žili, jaký byl zde hospodářský a politický kontext života v těch minulých cca 70 letech. Bohužel je málo zde žijících občanů, kteří mohou sdělit, jak se zde žilo, jaký osud přivedl do Damnic volyňské Čechy, či ostatní dosídlené obyvatele nebo jak probíhalo vysídlení původních obyvatel. Bohužel, i jejich informace o době cca krátce po roce 1945 jsou dosti kusé a nesouvislé.</p>
+<p>Proto mne velmi zaujal web p. Gerharda Hanáka (www.euro-mitte.de). P Hanák, jehož rod pochází z Damnic, popsal na webu jeho pohled na Damnice. Popisuje kontext doby od roku 1920 až do roku 1946 po vysídlení. Je to pro nás šance seznámit se s pohledem na tuto dobu, ale z druhého břehu řeky, plynoucí pod jménem ČAS.</p>
+<p>Věnoval jsem úsilí a čas a prostudoval internetové stránky p. Gerharda Hanáka o Damnicích a přeložil jeho originální německou verzi do našeho jazyka. Pouze gramaticky a ne  příliš dokonale jsem dopracoval český překlad a místy i názvy obcí.</p>
+<p>Dále jsem dostal od p.Grosse, jehož rodiče  byli mezi prvními novými přistěhovalci po roce 1945 do Damnic informaci, že kroniku  Damnic také sepsal další bývalý občan p.Edmund Wieder.Opět jsem jeho kroniku  přeložil do češtiny  a je v příloze  pod číslen 10</p>
+<p>Budeme se s manželkou snažit tyto informace rozšířit mezi známé a sousedy v Damnicích, kteří o to projeví zájem. Nemáme ale ambice  jakkoliv hodnotit toto historické období !</p>
+<p>Také jsem poslal p. Hanákovi anglicky psaný dopis datovaný 3.června 2021 s poděkováním za informace o Damnicích a také jsem mu sdělil, že jeho postřehy budeme předávat všem, kteří o to projeví zájem.</p>
+<p>Přikládám kopii dopisu p.Hanákovi:</p>
+<p>Dear Mr. Hanak,</p>
+<p>with respect and understanding, I have read your internet portal (www.europas-mitte.de) with historical views of the village of Damnice, where your family comes from.</p>
+<p>I moved to Damnice in 2014 with my wife to live a quiet retirement age. I am an electrical engineer by profession, I have worked for ABB company for more than 20 years. I am neither a historian nor a political scientist, but I am interested in a real time , that was tragic for you Germans and for us Czechs.</p>
+<p>I translated your WEB about Damnice into our language very literally, I only changed your German syntax to our Czech one without changing the meaning. I plan to distribute this report to my local friends who have a similar interest.</p>
+<p>I can assure you that the young generation is less and less interested in our common history. It is a mistake because history needs to be learned. Thank you again for the information provided.</p>
+<p>Ing. František Bytešník (frantisek.bytesnik@seznam.cz)</p>
+<p>Damnice No.4,  June 3rd 2021</p>
+</section>
+<section id="obec-damnice"><h2>Obec Damnice</h2>
+<p>se nachází na půli cesty mezi Znojmem a Brnem, kde železniční trať prochází přes silnici E54, které jsme říkali Kaiserstrasse. Železnice vede v katastru obce Damnice, ale relativně ve velké velkou vzdálenost od Damnic. Damice nemají vlastní vlakové nádraží. Stanice Miroslav byla původně postavena v katastru Damitz. Tato část západně od kolejí byla poté začleněna do Miroslavi. Říká se, že k tomu došlo kvůli velikosti komunity. Železniční trať byla uvedena do provozu v roce 1872. Východní část s kladivem Gasthaus, pilou a skladem si udržovala politickou příslušnost k Damicím až do roku 1945. Damnice měly v zásadě vynikající dopravní spojení, jak by se tomu dnes říkalo. V období před rokem 1945 to nemělo velký význam.</p>
+<p>Ekonomika v té době byla zcela zemědělská. Nechci jít do historického vývoje tohoto zemědělství, existuje více kompetentních lidí, ale popisuji to tak, jak si to pamatuji.</p>
+<p>Pěstovaly se hlavně obiloviny, cukrová řepa a doplňkové produkty jako jetel, kukuřice a brambory. Obilí, pšenice, žito a ječmen byly mláceny přímo ze sklizňového vozu a poté, pokud to nebylo pro osobní potřebu, přivezeny přímo do skladu na vlakovém nádraží. Tzv. Drozd stodola během zimních měsíců neměla téměř žádný význam. Cukrová řepa byla odvážena přímo z pole na nádraží Dolenice. Byla tam vážicí stanice, kde byly vozy váženy plné a prázdné, a pamatuji si, že před těmito váhami byly často dlouhé řady. Zboží bylo vykládáno buď na sklad, nebo přímo do železničních vozů. Za tímto účelem byla ve 40. letech 20. století na zastávce Dolenice) speciálně postavena rampa. Tuto vyhodili do vzduchu němečtí vojáci v květnu 1945. K prodeji se přepravovaly tyto zemědělské produkty:</p>
+<ul>
+<li>Pšenice cca 300 tun (t)</li>
+<li>Ječmen cca 250 t</li>
+<li>Brambory cca 250 t</li>
+<li>Cukrová řepa cca 2 100 t</li>
+</ul>
+<p>Existovalo také skromné ​​vinařství pro vlastní potřeby. Vinice byly na (severním) svahu západně od Tullnitz / Dolenice. Tyto vinice dnes již neexistují, ale vinné sklepy na konci vesnice nalevo od ulice Tullnitzer Strasse o tom dodnes svědčí. Pamatuji si, že v některých letech můj otec stále kupoval hrozny od farmářů v Litobratřicích, protože jeho vlastní sklizeň nestačila.</p>
+<p>Výstavba a provoz venkovního bazénu v Damnicích by zajisté z dlouhodobého hlediska vytvořilo další ekonomickou příležitost. Bylo by to ale uznáno a vnímáno konzervativními farmáři?</p>
+</section>
+<section id="pribeh-nebo-jeho-interpretace"><h2>Příběh nebo jeho interpretace:</h2>
+<p>Damitz byl poprvé zmíněn v roce 1353. Takovými prvními zmínkami jsou většinou pohyby majetku, půdy, v té době k nim docházelo mezi panstvími a kláštery. O jednoduchých farmářích se toho moc dočíst nedá.             Od roku 1535 patřil Schattauovi. V roce 1628 byla komunita opuštěna, kromě statku s ovčákem, zbytek byl také vypálen v roce 1645 vojsky plukovníka Torstensona (pravděpodobně během nebo po neúspěšném obléhání Brna). V roce 1665 je prodáno opatství Bruck. V roce 1653 bylo podle Lahnského rejstříku 5 čtvrtin lánů, někteří měly poloviční lány, někteří byli chalupáři a také bezdomovci. V roce 1784 celý majetek spadá do k.k. Regionální fond. V roce 1824 byl prodán šlechtici von Hopfen.</p>
+<p>Zvonice &quot;Campanile&quot; pochází z roku 1822, škola existuje od roku 1882.</p>
+<p>V roce 1866, během epidemie cholery, se Damitzové zavázali, že budou každoročně konat pouť k Marii Dreichen. Toto bylo dodrženo asi až do r.1941. Z každého domu by se měl alespoň jeden člověk pouti zúčastnit. Můj pradědeček šel cestu více než 30krát. Ostatní šli častěji, 40krát a více. Cesta trvala 3 dny, tam i zpět! To je přibližně 160 km! Pokud si pamatuji z mnoha příběhů, byla to po Kiritagu jedna z hlavních událostí ve vesnickém životě. Byl to vždy jen zbožný duch, nebo nějaký intenzivnější pohled přecházel sem a tam z chlapce na dívku místo modlitby?</p>
+</section>
+<section id="nemci-nebo-cesi"><h2>Němci nebo Češi?</h2>
+<p>Věřím, že lidé v té době byli velmi zaneprázdněni svým každodenním chlebem, že neměli čas dělat si starosti s národnostními problémy. Koneckonců neměli příležitost získat informace. Pravděpodobně neuměli ani číst ani psát. Věřili tomu, co jim diktovala jejich vláda nebo katoličtí, protestantští, čeští nebo němečtí kněží.</p>
+<p>Jak bylo zmíněno výše, populace byla téměř tak velká, jako byla vyhlazena během třicetileté války a poté znovu popularizována klášterem Bruck, jak se obecně předpokládá. Podle výzkumu L.Wiedera hlavně u lidí z oblasti Thayatales, tedy z dnešní pohraniční oblasti Moravy a Dolního Rakouska. Určitě to odvozuje z příjmení.</p>
+<p>Pokud se však budu řídit tímto přístupem, narazím na další jména, která lze nepochybně odvodit z češtiny. Jsou to (mluvím jen o Damitz) jména jako Zibuschka, Tatschek (orig. Ptacek = ptáček? (Bohužel neumím napsat C s „Hatschek“)), Nesnidal, Hanak, která existovala v Damitzu v době vystěhování. Lze tedy předpokládat, že se k nám přistěhovaly také rodiny českého původu, které se poté jazykově integrovaly do německy mluvícího prostředí a zároveň přizpůsobily své jméno německému pravopisu a mluvení, takže Hanak ztratil dlouhé „a“, Ptatschek se stal Tatschekem protože pro německý jazyk bylo snazší vyslovovat. A tak to zůstalo, když byli propuštěni v minulém století, stejně jako byli formováni pravidlem, ke kterému patřili naposledy: Němci nebo Češi. I když bych zde rád učinil omezení a chtěl bych jej vyjádřit:„německy mluvící“ nebo „česky mluvící“. Opět s odkazem na Damitz, německy mluvící, nebo jak řekl můj otec, německy mluvící Moravané.</p>
+<p>Podle mého názoru byla příslušnost k příslušné jazykové oblasti závislá na mnoha faktorech, nejen na osobním národním přesvědčení.</p>
+<p>Aby nedocházelo k nedorozuměním, mluvím konkrétně o venkovském obyvatelstvu, nikoli o městech. Jelikož byly většinou založeny Němci, lze předpokládat, že tam německé vědomí existuje již od počátku.</p>
+<p>Lze také předpokládat, že národní rozpory, které se v minulém století omezovaly hlavně na Čechy, hlavně kvůli spisům Palackého a Havlíčka Borovského na jedné straně a Löhnera a jeho kruhu na straně druhé, se zpočátku omezovaly na Moravu.</p>
+<p>Damitz je na Moravě. Proto používám výraz - jazyk. Pro ty, kteří to nevědí: Havliček, po kterém je dnes pojmenováno město Havličkův Brod, dříve Deutsch Brod, jako první vyzval k přesídlení Němců, nebo alespoň k jejich vedení, zatímco Löhner, naopak požadoval spojení německy mluvících oblastí s Německem nebo to bylo publikováno jako myšlenkový model. Německo jako stát v té době neexistovalo, ale byla to doba „Paulskirche“.</p>
+<p>Obě myšlenky se staly strašnou realitou o 100 let později!</p>
+<p>Havli ček-Borovský a Löhner později přiblížili své úhly pohledu tím, že přemýšleli o modelu formování národních kruhů ve federaci. To by byl model do budoucna, který byl z velké části realizován v Moravském kompromisu z roku 1905 bez účasti Havlička a Löhnera.</p>
+<p>Lázně DAMNICE,</p>
+<p>postavil učitel Ludwig Weider (fotografie níže)</p>
+<p>Historii bazénu sepsal Harald Wieder, syn stavitele bazénu Ludwiga Weidera</p>
+<p>Publikováno byla v Jihomoravské ročence 1999 (se svolením autora)                                                                                 Zdroje: Ludwig Wieder: Zpráva o vytvoření Damitzovy minerální lázně, 1961                                                                      Informace od paní Hermine Wiederové, příbuzných a přátel a vlastních vzpomínek a pozorování.</p>
+<p>12. června 1932, po více než dvou letech výstavby, byl za přítomnosti tisíců návštěvníků z blízka i z dálky oficiálně otevřen venkovní bazén Damnice. Jak píše Alfred Schickel ve svých Dějinách jižní Moravy“, která stojí za přečtení. Zdůrazňuje, že tento zahajovací festival lze zařadit do řady akcí, s nimiž se jihomoravští Němci, na které opět tlačila agresivní česká „Národní Jednota“ kolem 1930/31, vzpomněli na své kulturní dědictví a chtěli si zachovat závazek ke své rodové identitě. V Damicích bylo mnoho gymnastických a plaveckých festivalů; jihomoravský Turngau zde každoročně pořádal okresní plavání, účastníci a týmy dokonce pocházeli z hlavního města provincie - z Brna.</p>
+<p>Ludwig Weider jako mladý učitel v sousedních Dolenicích (Tullnitzu) veřejně protestoval proti českým opatřením v rámci takzvané „pozemkové reformy“ a v roce 1924 byl přeložen do vzdáleného Groß-Steurowitzu poblíž Auspitzu. Cesta vlakem z Damnic přes Brno a poté hodinová procházka do Steurowitzu, to na tu dobu znamenalo celodenní cestu.</p>
+<p>V Damicích, na trojhektarovém zahradním pozemku („na přehradě“) vedle budoucího pozdějšího koupaliště, založil svůj budoucí dům již v roce 1927. Nejprve postavil velmi stabilní zeď ze slínkových cihel, včetně vstupní brány z tepaného železa se svými jmény-jeho a jeho manželky Hermine, rozené ZeihseI, dcery dlouholetého starosty a poslance státního parlamentu Cyrilla Zeihsela (1870-1924), který přežil dodnes. Dům na přehradě byl plánován; odtud by měl člověk široký, ničím nerušený výhled na Miroslav (Misslitz) a lesní špičku „české mše“ stoupající na západním obzoru. Pro oddaného hobby zahradníka Ludwiga Wiedera se zde otevíral téměř rajský pohled na život, zejména proto, že se v roce 1929 mohl vrátit do svého bližšího domova. Do roku 1935 byl v Miroslavi a mezitím znovu v Dolenicích. Dalším jeho cílem bylo postavení vyššího učitele a ředitele v bližší domovské oblasti, možná dokonce i v samotných Damnicích.</p>
+<p>Ve stejném roce, kdy se „vrátil“ Ludwig Wieder, tj. v roce 1929, chtěla damnická komunita rozšířit výše zmíněný husí rybník na větší vodní nádrž, která měla být napájena potokem protékajícím kolem Miroslavi, který Damnitští jednoduše nazvali „Damnický potok “. (Češi jej dnes nazývají Miroslavka). Ludwig Weider a další navrhli postavit nádrž takovým způsobem, aby se zde mohla koupat alespoň mládež. Komunita, ve které udávali tón velcí a často velmi konzervativní farmáři, souhlasila s podmínkou, že navrhující pánové převezmou náklady na zřízení náhradního husího jezírka v obci. Neobvyklé zákonné opatření! Z pánů nakonec zbyl jen jeden: Ludwig Wieder. Zaplatil 5500 korun za novou povodeň (učitel v té době vydělal mezi 1000 a 2000 korunami měsíčně).</p>
+<p>Tak to všechno začalo. Stavební firma se znovu prosadila, navrhla idiosynkratické a originální stavební plány a v případě potřeby sáhla do vlastní pokladny. To vše bez jasných právních dohod s komunitou. Co Ludwiga Weidera k tomu přimělo? Povzbuzen úspěšným návratem chtěl mít vedle svého budoucího „ráje“ také krásný venkovní bazén s relaxační zelenou plochou (dnes by mnoho aut snížilo kvalitu života zde); chtěl také něco udělat pro komunitu, pro širokou veřejnost („Společné dobro přichází před vlastním zájmem“ bylo po dlouhou dobu psáno na banner). Pedagog a aktivní člen německého gymnastického hnutí chtěl dát mladým něco a podpořit jejich zdraví. Stále můžete vidět kovovou desku s portrétem otce gymnastiky Friedricha Ludwiga Jahna ve sloupu zdi na předním plotu. Pracovat &quot;místo toho, aby peníze ležely ve spořitelně“. Motiv, který je dnes pro nás společný, investovat peněžní kapitál tam, kde slibuje nejvyšší zisk zde nehrálo žádnou roli. Bylo to mnohem víc než speciální ambice, která prostoupila Ludwiga Wiedera, vytvořit něco trvalého a smysluplného - bez tohoto motivu by neexistovaly žádné velké úspěchy v kultuře, ekonomice, politice.</p>
+<p>V roce 1930 byl bazén „připraven“, koneckonců (téměř) skutečný venkovní bazén v pusté oblasti. Velkým problémem však byl na prvním místě problém s vodou! Zřejmě iniciátor a odpovědní členové komunity věřili, že vesnický bazén by mohl pro ně fungovat s ne vždy velmi čistou vodou z potoka. Zasáhl lékařský úřad okresního města Mährisch Kromau (Moravský Krumlov) a spojil povolení ke koupání s 22bodovými podmínkami, které musely být splněny do tří let. Nejdůležitější: čistá, zdravá voda s vydatností zdroje nejméně 1 litr/s.</p>
+<p>Dobrá rada teď byla drahá. V komunitě Damnice je jen velmi málo studní nebo pramenů, které poskytují pitnou vodu pro lidi, natož pro bazén. Mimo jiné chtěli využít bohaté prameny u Schmieda Gutmanna a požárními hadicemi vést vodu asi 300 m do bazénu. Ani toto nebylo řešení. Zdálo se, že celé podnikání s lázněmi selhalo, spousta peněz byla „utopena v bahně“ a nálada v komunitě během velké hospodářské krize nebyla dobrá.</p>
+<p>Ale Ludwig Wieder byl již příliš připoután k „projektu lázní“, příliš se s tím ztotožnil - nemohl se vzdát! Podařilo se mu na vlastní náklady najít studnaře Gustava Sterlickeho z Rumburgu /Nordhöhmen, který našel a označil tři „vodní prameny“. Před očima mnoha skeptiků začalo vrtání artézské studny ručně na začátku února 1931, původně na náklady komunity. Když ani po dvou nebo třech týdnech nebyl výsledek, starosta společnost sám zrušil, ale opět to nechal pokračovat na své náklady. Příběh lázní měl své dramatické incidenty! Je však také třeba pochopit znepokojené a přesto mazané rolníky, že ho nechali jít (koneckonců komunita by byla vlastníkem).</p>
+<p>Po neúspěších však brzy následovaly nejdůležitější body:18. března 1931 v hloubce 96 m ručně poháněná vrtací tyč náhle propadla o dobrý metr; bylo slyšet podzemní šustění a okamžitě vystřelil do vzduchu proud vody vysoký 11 m, jako fontána, vydatný 3 litry/s. Artézský pramen byl nalezen. Celá oblast byla brzy pod vodou, jak mi nedávno řekl očitý svědek. Pro Ludwiga Wiedera to byla jedna z největších hodin jeho života. Dodržel svůj slib: První osoba, která mu mohla nahlásit „vodu“, dostala 100 korun.</p>
+<p>Ale bylo to ještě lepší: po odborném posudku prof. Dr. Kurtenackera z Německého vysokého učení technického v Brně obsah kyseliny uhličité, uhličitany a sírany, manganu a jodu ospravedlnil označení „minerální voda“. Damitzova voda dokonce předčí léčivou vodu hojně navštěvovaných moravskoslezských lázní Karlsbrunn a to ze všech pramenů, které doposud prozkoumal. Z Damnic by se daly vytvořit lázně!</p>
+<p>Po tomto neočekávaném úspěchu, který lze jednoznačně označit za „bod obratu“, se Ludwig Wieder cítil plně potvrzen a urychlil další rozšiřování koupaliště podle svých vlastních představ a stále více na své náklady. Rozšířil se podíl neplavců; fontána měla předehřívat studenou pramenitou vodu, dodávala celému komplexu s pramenem, halou s občerstvením a kabinami své zvláštní architektonické kouzlo. Na hřiště se nyní přestěhoval i vášnivý hobby zahradník Wieder Schindanger.</p>
+<p>Po vyrovnání terénu tam vytvořil háj modrých jedlí a smrku stříbrného. Nakonec byl celý komplex oplocen a Wieder zasadil mnoho trvalek a květin, které brzy vzkvétaly a zářily barevnými květy. Celá věc udělala na diváka příjemný, skvělý dojem. V létě roku 1935 popsal předseda Moravskoslezského oblastního sdružení cestovního ruchu Wagner z Opavy celý komplex koupání s lesem, gymnastikou a dětským hřištěm v harmonické koordinaci a interakci jako jeden z nejkrásnějších a nejunikátnějších výtvorů svého druhu v celé Československu. Damnice byl přidány do seznamu vhodných míst pro cestovní ruch.</p>
+<p>V neděli a o svátcích byl bazén, když bylo dobré počasí, brzy zaplněn; návštěvníci přišli z blízka i z dálky, pozoruhodný počet brněnských Němců jel autobusem nebo na kole na Kaiserstraße na „BIumenbad“, jak se jim říkalo. Dnes členové zážitkové generace stále mluví o „bazénu“ s uznáním a nadšením. Do jejich pokojů se dostalo mnoho hostů; Damnice se skutečně začaly pomalu stávat turistickým cílem. Časté festivaly již byly zmíněny na začátku. O organizaci koupaliště se staral patnáctičlenný koupací výbor s předsedou Ludwigem Wiederem. Teplá léta 1932, 1934, 1935, 1937 a 1941 byla obzvláště dobrá koupací léta. Čistý zisk v předválečném období činil přibližně 4500 korun ročně, vstupné bylo poměrně nízké: samostatná kajuta 1,50 kc, společná kajuta 80 nebo 50 haléřů, školní děti měli ve všední dny vstup zdarma.</p>
+<p>V létě 1934 Státní zdravotní úřad Brno (režie Dr.Matejka) komunitě Damitzů povolil, aby ve své reklamě používala výraz „minerální koupel“; voda v lahvích mohla být prodávána jako minerální voda. Rozvoj lázní ospravedlnil i levný rozbor vody. Chytrý současník (byl to Dr. Ludwig Wieder od Znaima): Doposud byl Damitz místem Kui, nyní místem Kuah“ (Kui = kráva, Kuah = léčba).</p>
+<p>Více než kapka hořkosti pro stavitele koupelen byla vlastnická struktura, která byla vyjasněna až v roce 1945. Opět celkem 98 000 Kč, obec 112 000 Kč. Vzhledem k tomu, že na začátku roku 1929 nikdo nepředvídal, co se nakonec stane se skromným počátečním projektem, přinejmenším ze všech vyhlídek na možné lázně, stavitel lázní věnoval, jak již bylo řečeno, příliš malou pozornost právní oblasti ve své vášni pro design; to se také obrátilo proti vůdcům komunity. Během německého období chtěly organizace KdF a NSV koupit podíl našeho otce nebo jeho právo požadovat.</p>
+<p>V roce 1935 Wieder, pravděpodobně poněkud rezignovaný, opustil svou bližší jihomoravskou domovinu a nastoupil do pozice vyššího učitele a ředitele na jazykovém ostrově Wischau, v sympatické Hobitschau (česky). Zůstal tam, dokud nebyl vyloučen v roce 1945, a přestavěl zarostlou oblast (tentokrát ve škole) na velmi obdivovanou modelovou zahradu, ve které vytvořil malý bazén, ze kterého na nás děti stříkala voda. Později můj otec tyto roky opakovaně označil za „deset nejlepších ve své profesionální kariéře.“ On a jeho rodina se tam obecně cítili velmi dobře. Stejně jako dříve v Damitzi si „vyšší učitel“ získal pověst sociálně smýšlejícího a jednajícího náborového pracovníka v době vysoké nezaměstnanosti.</p>
+<p>V tuhé zimě 1941/42 se v Damitz Bad přetrhlo vodovodní potrubí a během války nebyl žádný materiál na opravy, žádní vhodní kvalifikovaní pracovníci (a pravděpodobně příliš malá dobrá vůle v té době mezi vůdci komunity); většina mladších mužů se odstěhovala. Vana byla mimo provoz v letech 1942 až 1944 a voda se dostala z pramenného domu k potoku jen pár metrů odtud. Kupodivu byla česká komisařka Cepera schopna zřídit dočasné koupaliště až v roce 1945 pomocí jednoduchých požárních hadic od pramenního domu k bazénu. Bylo několik krásných, klamných letních týdnů, ve kterých si v neděli mohla dopřát, tehdy většinou německá mládež z Damnic a sousedních měst, koupací radosti. Ale v novém českém státě se už temné mraky stahovaly proti nám Němcům. Ludwig Weider mohl včas odjet do Rakouska; viděl koupaliště, svůj výtvor, naposledy v roce 1945.</p>
+<p>Dnes se lázeň stále používá. Ve srovnání s prvními lety vypadá všechno ošuntěle a skromně. Z hodnocení minerální vody nelze nic zaznamenat. Novější iniciativy z Rakouska v tomto směru se rozplynuly. Přebytečná minerální a léčivá voda stéká do kanalizace po celá desetiletí a ztrácí se v Dyji a při povodních Dunaje.</p>
+<p>(Poznámka: fotografie bazénu dnes byla pořízena kolem roku 1997, voda by měla mít znovu kvalitu původního husího bazénu!)</p>
+<p>Damnice-pohled na ulici v roce 1940/41</p>
+</section>
+<section id="vyvlastneni-a-vysidleni"><h2>Vyvlastnění a vysídlení</h2>
+<p>Do roku 1945 to byla vesnice s čistě německým obyvatelstvem. To bylo zcela násilně přemístěno ve 3 transportech do Německa v letech 1945/1946. Podle Benešových dekretů, které byly legální, byly některé rodiny dříve převezeny na nucené práce do „střední České republiky“. Ty však byly převezeny zpět do tábora v Deutsch-Knönitz / Knínice u Miroslavi k takzvané evakuaci a „evakuovány“ společně s ostatními vesničany. Na osobu bylo povoleno 50 kg zavazadel. To, co bylo dovoleno vzít, však záviselo na nových „majitelích“. Němcům už v zásadě nic nepatřilo, ani osobní oděv.</p>
+<p>Jak se noví „vlastníci“ dostali ke svému „majetku“?</p>
+<p>V červnu / červenci 1945 procházeli vesnicí většinou muži, dívali se na domy, také vešli, většinou v doprovodu ozbrojeného muže, vše prohlédli a pak se pravděpodobně museli hlásit u „inspektora“. Komisař měl funkci starosty, ale byl jmenován českými úřady.</p>
+<p>S tím vlastnictví přešlo na nového „vlastníka“. Oficiální formality, které stály za tímto jednoduchým procesem, pro nás nebyly viditelné, ale také neměly žádný význam. Noví „vlastníci“ měli certifikát, který je uváděl jako vlastníka nemovitosti s veškerým živým a mrtvým inventářem. Od té chvíle se z domu nesmělo nic vynášet ani žádným způsobem odstraňovat. Bylo zcela na vás, co jsme si mohli nechat.</p>
+<p>Byli jsme tedy bez domova a bez státní příslušnosti, jak uvádí obžaloba proti našim otcům u okresního soudu ve Znojmě.</p>
+<p>Na obrázku mého rodného listu je použito české razítko potvrzující „expatriaci“ Přeprava probíhala z vlakového nádraží Misslitz / Miroslav. Byli jsme naloženi do dobytčího vozu s 30 lidmi, včetně zavazadel. Cesta do Seckachu v severním Badenu trvala 3 dny. K „distribuci“ vysídlených obyvatel docházelo hlavně přes Bavorsko a severní</p>
+<p>Württemberg / Severní Baden.</p>
+<p>Po takzvaných „zlatokopech“ byla obec osídlena prvními  Čechy v roce 1945, ale z větší části se odstěhovali, když už nebylo nic, co by bylo třeba odvézt. Potom  vesnici osídlili Češi z Volyně až kolem roku 1949. Ani tito lidé nepřišli dobrovolně, byli také násilně přemístěni. Měli jen tu výhodu, že se mohli přestěhovat do stávajících domů, zatímco my jsme si domy museli znovu vybudovat  kousek po kousku, s velkým úsilím a strádáním.</p>
+<p>Zpráva o osobní zkušenosti</p>
+<p>Tuto zprávu o osobní zkušenosti píšu na zvláštní žádost naší dobré české kamarádky, paní Věry B. Řekla, že je to důležité. Věra je básnířka, ale odpustí mi můj střízlivý styl.</p>
+<p>Náš dům a dvůr, typický obdélníkový dvůr Maehrischer o rozměrech přibližně 38 x 125 m, byl v poslední den války zasažen celkem 17 bombami a granáty. Vlastní dům měl jen malé poškození střechy, ale můžete si představit, že působil poněkud otlučeným dojmem.</p>
+<p>Kvůli exponovanému umístění domu jsme strávili první dny - nebo týdny? - po 8. květnu 1945 s babičkou v jejím domě.</p>
+<p>Po prvních dvou týdnech, kdy byli Rusové ve vesnici nebo vsí  procházeli, byla vesnice zpustošena českými gangy.</p>
+<p>Drancovali, mučili a vraždili (v Damnicích  muž, pan Viktor Wieder, tichý, neškodný farmář).</p>
+<p>S dlouhými hroty s ostnatými háky hledali v zemi zakopané zboží. My Němci jsme museli předat veškerý majetek vyšší hodnoty, jako jsou rádia a kola.</p>
+<p>Mnoho lidí raději skrylo nebo přemístilo  tyto předměty do polí.</p>
+<p>Tito bandité se o samotné místo vůbec nezajímali a odešli dál, když si mysleli, že všechno vyčistili.</p>
+<p>V květnu se ruští vojáci pokusili s malým úspěchem použít nás děti k práci na poli a tahat řepu. My děti jsme byli povoláni do školy organizovat práci. Při vstupu do učebny jsme samozřejmě zvedli ruce a řekli „Heil Hitler“.I  Rusové se museli smát. Nechci přemýšlet o tom, co by se stalo, kdyby tam byli Češi místo Rusů.</p>
+<p>Na konci května byli do našeho domu pozváni přeživší pochodu smrti brněnských Němců. Žena k nám přišla se svou starou matkou, prakticky bez čehokoli, hlavně s tím, co měla na těle a malým kufříkem.</p>
+<p>Poté, co Češi v prvních dnech zabili ty, kteří tu zůstali, bylo jich pravděpodobně příliš mnoho, takže byli „rozděleni“ do okolních vesnic a tak zachráněni před pochodem do Rakouska.</p>
+<p>Pak přišlo nařízení, že všichni Němci starší 14 (?) let musí nosit bílou pásku s našitým černým „N“. Ve věku 9 let jsem také trval na takovém obvazu a téměř vždy jsem ho nosil, téměř jako medaile! Myslím, že jsem tehdy byl horlivý nacionalista, ne-li nacista, z vlastní vůle .My děti jsme v roce 1945 měli stále nebeský čas. Nesměli jsme chodit do školy, což nás rozhodně netrápilo.</p>
+<p>Když byla s českým komisařem zřízena jakási česká vesnická správa, můj otec, který byl dříve místním farmářským průvodcem, mohl tomuto komisaři pomoci seznámit se s vesnickými záležitostmi, pravděpodobně kvůli jeho znalosti českého jazyka.</p>
+<p>Když již tato pomoc nebyla nutná, byl zatčen a převezen do pracovního tábora v Mährisch Kromau  / Mor.Krumlov.</p>
+<p>Náš dům podle výše uvedeného postupu „převzal“ jediný 22letý Čech z Volyně .Nyní jsme byli 3 strany v našem domě. S „naším Čechem“ (tak jsme to vlastně řekli, ale pro Čechy jsme použili obvyklý „Behm“!) Václavem Hokeschem jsme mohli dopadnout i hůře.</p>
+<p>Všechno, co se dalo najít, se destilovalo do pálenky, pilo se to celou noc v naší velké farmě, dokud jsme nebyli v bezvědomí, ale mohli jsme zůstat v našem domě. Moje matka a moje sestřenice Maria, kteří v té době žili s námi, neměli po nasazení české rodiny žádný pokoj v domě svých rodičů, ukradli co nejvíce jejich pálenky z Čech a vyrobili vaječný koňak. Maria vzala část tohoto likéru s sebou na pozdější noční výlet do Rakouska. To jí jako prostředek směny rozhodně pomohlo ?! Její rodina později musela vyklidit dům a našla úkryt u příbuzných ve vesnici.</p>
+<p>Jedna z mála fotografií z tohoto období (snad z jara 1946) ukazuje zleva doprava: Hokesch senior, neznámý, moje babička, Václav Hokesch, moje matka, Joschka Heller sedí vpředu.</p>
+<p>Během chlastu soldatesky kolem Václava &quot;Waschka&quot; Hokesche jsme s bratrem museli zůstat vzhůru. Moje matka nás právem viděla jako ochranu. Tihle chlapi nakonec nebyli docela brutální.</p>
+<p>Když byla moje matka požádána, aby nás dala do postele, vždy říkala, že pokud nás stejně zastřelí, což často vyhrožovali, chtěla by, abychom byli všichni zastřeleni společně. Mnoho let poté jsem trpěl nespavostí nebo jsem měl vážné problémy se spánkem. Jinak by mladého Hokesche brzy stejně měla pod palcem!</p>
+<p>Těžko si to dnes dokážete představit, ale Němci nesměli vlastnit peníze ani nic prodávat, aby získali peníze. V té době také na takové farmě existoval určitý příjem, i když ekonomika klesala. Ale prodalo se mléko, možná prase, a pak v roce 1945 určitě došlo ke skromné ​​sklizni. Veškerý vytvořený příjem shromáždili domácí okupanti. Když se pak mělo něco koupit, museli jsme požádat nového majitele domu, aby zaplatil. Až do našeho přesídlení jsme byli do jisté míry „majetkem“ českého domácího obyvatele.</p>
+<p>Můj otec přišel z tábora v Mähr.-Kromau / Moravský Krumlov  na podzim roku 1945, pravděpodobně pod vlivem pana Schabaty (Šabaty) z Tullnitz / Dolenice. Pracoval při sklizni  cukrové řepy v Tullnitz / Dolenicích, bydlel v hostinci Lang .Pro mě to byl pravděpodobně nejintenzivnější čas strávený s mým otcem .Krátkou cestou do sousední vesnice jsem šel téměř každý den a strávil jsem s ním většinu dne .Moji rodiče ve starém sklepě schovali sud s vínem, který můj otec za tu dobu pravděpodobně docela vyprázdnil. Často přicházel domů tajně v noci nebo pozdě večer!</p>
+<p>Když ten čas skončil, skončil také relativně dobrý čas. V našem domě se nic nezměnilo, ale bylo možné předvídat první transport do Německa a mnoho obyvatel již bylo evakuováno ze sousedních měst.</p>
+<p>„Evakuace“ obyvatel Damnic začala později, protože v důsledku pohřbených těl mnoha zvířat došlo k epidemii tyfu .Můj otec byl poslán do okresního vězení ve Znojmě. Tam byl po několika týdnech vězení za nepopsatelných podmínek odsouzen na 6 let nucených prací.</p>
+<p>Poté přišel nejprve do notoricky známé věznice v Mürau / Mírov a poté pracoval v lomu v Tlumatschau / Tlumats. Dalo se tedy předvídat, že bez mého otce budeme muset zahájit „cestu“ do Německa.</p>
+<p>Moje matka poté navštívila mého otce v Mürau i v Tlumatschau. To nebylo snadné, protože potřebovala cestovní povolení, protože Němcům bylo zakázáno cestovat vlakem. Přitom se musela zavázat, že nebude ve vlaku sedět !! Řekla, že ji jednou ve vlaku tlačila česká žena, aby se posadila. Žena slíbila, že ji bude sledovat a varuje ji, pokud má přijít průvodčí. Také to udělala. Nebyl to tedy jen čistý teror! Čeština mé matky nebyla tak dobrá, ale odvážila se  cestovat  bez bílé pásky.</p>
+<p>Výňatky z mých „Malých příběhů“:</p>
+<p>Když jsme v prvních dnech po skončení války žili v domě mé babičky, byli tam shromážděni téměř všichni naši Damničtí příbuzní. Večerní modlitba s námi dětmi, bylo nás tam celkem dost, byla (opět)vedena  mojí tetou Luise. Byla to dlouhá řada modliteb, které nám řekla. Udělala to však takovou rychlostí, že jsem potom byl vždy úplně bez dechu. Při této rychlosti jsem nemohl vytvářet zbožné myšlenky!</p>
+<p>Poslední den války Rusové shodili na naši vesnici obrovské množství bomb. Pak na polích kolem vesnice uvízly stovky hadrů. Jednalo se o malé bomby s našroubovanou rozbuškou z bakelitu. Úderník byl držen na místě pomocí šroubu, jehož hlavová část byla navržena jako vrtule. Pokud se tato vrtule při odhození bomby neodšroubuje, bomba nevybuchne. My chlapci jsme brzy přišli na to, jak odstranit rozbušku z bomby. Potom jsme odšroubovali vrtuli, odstranili pružinu pod úderníkem a celou věc sešroubovali dohromady - nyní nezajištěnou. Pokud jsme potom odhodili rozbušku, explodovala samotná roznětka. Hluk jsme si užili. S množstvím válečného materiálu, který tu ležel, jsme museli mít zvláštního strážného anděla, protože se neštěstích  stalo  relativně málo. Děkujeme učiteli Krappelovi, který nás hodně naučil manipulaci, než byl přiveden do tábora v M.Kromau.</p>
+<p>Jak jsem již zmínil, my děti jsme měli úplnou svobodu od dubna 1945 do června 1946. V té době byla populární hra boj s kozly nebo berany. K tomu došlo hlavně v takzvaném Stolhofu, což je zadní nádvoří. Byla to jednoduchá hra. Zvíře volně pobíhalo po dvoře, my jsme seděli na tyčích co nejvyšší. Pak jeden nebo více z nás šli do arény a holýma  rukama odrazili útoky kozy. Ukázalo se, že to bylo fatální, pokud se babka nenechala rozptýlit jiným chlapcem a vy jste se unavili. Pak jste se museli pokusit dostat na vyvýšené bezpečné místo co nejrychleji. Pokud by to nefungovalo, dostali byste od kozy vzadu plnou ránu a přistáli byste zhruba na břiše. Dopad pak obvykle nebyl tak atletický, aby zastavil jeho útok. Máme docela dost modřin.</p>
+<p>Rusovi se kdysi líbily kalhoty mého otce. On, Rus, byl doprovázen jedním z nových Dorftschechenů jménem Cigler nebo Ziegler, oba ozbrojení, Cigler působil jako jakýsi vesnický policista. Můj otec si musel sundat kalhoty a dát je Rusovi, pokud nechtěl vyprovokovat něco horšího. Cigler byl jedním z lidí, které měl můj otec trénovat v komunitních záležitostech! Očividně se později styděl. Myslím, že pro Čechy bylo snazší zacházet s Němci špatně, pokud nemluvili česky. S mým otcem to bylo jiné, protože mluvil jazykem, a proto, jak řekl, byl v tom vždy relativně dobrý, protože mohl a musel tlumočit.</p>
+<p>Na toto téma jsem četl zajímavý odstavec v knize Frederika Forsytha. Možná to občas přeložím a vložím na svou domovskou stránku.</p>
+<p>Jak jsem již zmínil, česká Soldateska kolem Václava Hokesche a jeho kamaráda Josefa „Joschky“ Hellera měli v naší kuchyni dlouhé pití. Následujícího rána byla dobrá hlava Vaschka zjevně v mizerném stavu. Jednou, když vyhrožovali, že nás večer znovu zastřelí, mi to  matka příštího rána tvrdě vytkla. Nechápal jsem to, ale pamatuji si, že moje matka byla velmi hlasitá. Jako smíření se pokusil se svou karabinou střílet na holuby. Nezasáhli jsme nic, co by ho na hlavě nepřekvapilo, ale byl jsem docela zkažený.</p>
+<p>Můj otec jednou zaplatil dluh muži se stotisícovkou. Příjemce si všiml, že bankovka  byla zcela nová, na což můj otec odpověděl: „Samozřejmě jsem ji vytiskl až včera!“ Pokaždé, když můj otec musel něco zaplatit, bál jsem se, že by mohl použít čerstvě vytvořenou poznámku, a vždy, když tomu tak nebylo, se mu ulevilo. Bál jsem se, že můj otec půjde do vězení, protože v poznámce stálo: „Kdokoli kopíruje nebo falšuje bankovky nebo padělky nebo padělané ...“</p>
+<p>Jeden z Čechů, který přišel do Damnic, měl lehkou motorku, na  které vždy jezdil. Je zřejmé, že nevěděl, jak zastavit motor, takže někdy jezdil po vesnici, dokud nedošel benzín a jeho vozidlo samo nezastavilo. Jako opatrný muž měl vždy síť s kouskem chleba ...</p>
+</section>
+<section id="prijezd-a-prijeti-v-nemecku"><h2>Příjezd a přijetí v Německu</h2>
+<p>Tato zpráva je záznamem paměti 10 až 14letého chlapce, který byl v té době jistě bdělý a netvrdí, že je historicky přesný.</p>
+<p>1. Jízda</p>
+<p>Za slunečného červnového dne to mohlo být 20., na nádraží v Misslitzu jsme byli naloženi do dobytčích vagónů amerických ozbrojených sil, které byly o něco menší než německé. 30 osob na vůz, včetně zavazadel. Zavazadla byla nahromaděna vysoko na levé straně, takže prostor pro lidi byl na pravé straně.</p>
+<p>Byli tam  hlavně naši příbuzní v našem vagóně, Hawle, Wieder a Hanak, stejně jako další místní obyvatelé, ale nepamatuji si je. Protože bylo hezké počasí, zůstaly dveře otevřené. Pro bezpečnost byl použit příčný sloup.</p>
+<p>Výlet byl školou  místní historie. Klekli jsme si nebo se přikrčili před dveřmi a můj strýc Edmund nám vysvětloval.</p>
+<p>Jeli jsme rychlostí kráčejícího chodce přes slavný Kanitzerův most, dílo Eiffela, který také stavěl Pařížskou Eiffelovu věž, pak do Brna, kde jsme viděli Spielberg a slyšeli příšerné příběhy o mučení, které se tam dříve provádělo (?), pak Praha, já si velmi dobře pamatuji, že můj strýc řekl, že bychom se měli podrobně podívat na Hradschin( Hradčany), „kdo ví, zda a kdy to ještě někdy uvidíme“, to bylo tehdy, když jsme jeli přes Vltavu.  Opět jsem je viděl až o 46 let později.</p>
+<p>Abychom si ulevili, byli jsme na různých zastávkách vedeni k latrínám. Vedeni, protože v řadě vždy stáli těžce ozbrojení muži, aby nikdo neutekl! Cestou zemřel pan Johann Bauer, Manfred a můj kmotr.</p>
+<p>Ve Furth im Walde jsme překročili hranice a byli v Německu.</p>
+<p>V Norimberku pršelo, viděli jste jen ruiny. Na plošině jsem našel 10 000 bankovek pengo, které jsem roky držel jako svůj tajný poklad. Poté to pokračovalo přes Würzburg do Seckachu v Badenu v americké zóně.</p>
+<p>Cestou jsem dostal obrovský šok, když jsme z vlaku uviděli vojenský sloup s hvězdou namalovanou na něm. Myslel jsem, že jsou to Rusové, nevěděl jsem, že Američané mají na svých vozidlech také hvězdu, byť bílou.</p>
+<p>2. Altheim</p>
+<p>&lt;zpět, respektive Seckach v „Ďáblově čepeli“, jsme byli posláni do baráčnického tábora.</p>
+<p>Během války tam byla postavena podzemní továrna a sklad a tábor byl pravděpodobně zřízen pro dělníky. Cestou jsme byli odvšivováni, zase tady v Seckachu. Bylo to provedeno takovým způsobem, že nám pod šaty foukali obrovské množství bílého prášku pomocí obráceného vysavače, říkali, že Američané budou na čistotu a tak podobně přísní.</p>
+<p>Co se týče čistoty, nevím, jestli jsme se dokonce myli nebo jsme se mohli umýt po cestě. Pro jedenáctiletého to rozhodně nebyl problém! Během času v táboře hodně pršelo, rozhodně jsme byli dosti  špinaví.</p>
+<p>Po několika dnech v Seckachu jsme byli rozděleni do vesnic. Přišli jsme do Altheimu ve čtvrti Buchen / Odenwald. Samotný Altheim je již součástí „stavebního pozemku“.</p>
+<p>Byli jsme tam vyloženi a seděli s našimi zavazadly a na nich, dokud nám nebylo přiděleno místo k pobytu nebo jsme nedostali instrukce. Přišli jsme do domu rodiny Heroldů. Pan Franz Herold byl stále válečným zajatcem. Pouze paní Heroldová bydlela v domě se svou dcerou Ottilií, byla tak stará jako já. Náš pokoj byl pod střechou s předsíní pro naše zavazadla. Po několika dnech nám komunita dala postel sbitou z prken a „kamna pro uprchlíky“.</p>
+<p>Naše přijetí v Heroldově domě proběhl bez problémů, Frau Heroldová nebyla příliš přátelská, ale to byla její povaha. My, můj bratr a já, jsme si brzy vytvořili blízké přátelství s dcerou Ottilií, což v jednoduchém jazyce znamenalo, že s námi mohla křičet stejně, čím více, tím lépe.</p>
+<p>Když se pan Herold vrátil domů ze zajetí, jeho žena ho pozdravila „celý dům je plný!“ na kterou ještě v uniformě svého vojáka s batohem na zádech odpověděl: „Co jste po všem, co se stalo, čekali jinak?“. Moje matka, na tuto jednoduchou větu pana Herolda  nikdy nezapomněla.</p>
+<p>Jiné rodiny neměly tolik štěstí se svým „přijetím“, někteří majitelé domů se odmítli vzdát bydlení, takže některé rodiny mohly najít místo k pobytu pouze s pomocí policie. Lze si živě představit soužití, které za takových okolností vzniklo.</p>
+<p>Při zpětném pohledu nevím, zda jsme vždy měli tolik štěstí než mnozí jiní, nebo zda to nebyli také moji rodiče, zejména moje rozhodná matka, která se nikdy moc neohlížela,  ale vždy to, co bylo před ní, bylo řešeno ?</p>
+<p>V každém případě, zatímco někteří ještě seděli na svých rozbalených zavazadlech, matka se už pokoušela najít nějaký druh práce, abychom si kromě lístků na jídlo mohli dát něco k jídlu. Ukázalo se, že pan Herold byl skutečným přítelem a pomocníkem.</p>
+<p>V té době byl Altheim centrem pěstování zelené špaldy, takže matka pomáhala se sklizní jen několik dní poté, co jsme dorazili, a každý den jsme měli hustou zelenou špaldovou polévku. Později mi už bylo špatně, když jsem zmínil zelenou špaldu, a dokonce i teď, když píšu, mám ji v ústech. Ale mělo to být velmi výživné a moje matce opravdu nelze závidět, že byla  požehnána  dvěma nenasytnými chlapci.</p>
+<p>Ano, po dlouhé době svobody začala škola znovu. Po více než jeden a půl roce nebylo snadné znovu zapadnout. Náš učitel Soden měl ve třídě také asi 60 dětí. Rovněž si nevzpomínám na to, co jsme se naučili. (Anekdoty z této doby najdete jinde pod mými „Příběhy“)</p>
+<p>Země kolem Altheimu je velmi kamenitá. Farmáři vždy sbírali kameny na svých polích a rovnali  je na hromady kamenů vedle polí. Na těchto hromadách rostly třešně, které jsme sklízeli, protože zjevně nikomu nepatřily, pak tam a v lesích bylo hodně bobulí. Moje babička nás docela intenzivně využila ke sbírání.</p>
+<p>Jednou, když jsme byli znovu v lese s babičkou, bratranec Reinhard (Hawle) viděl krásnou vidličku větve, kterou by si přál na prak. Bohužel to bylo docela vysoko na buku. Bratr Manfred pomohl Reinhardovi ohnout strom dolů. Reinhard vzal poleno mezi nohy a začal kapesním nožem odřezávat vytouženou vidličku. Manfred o věc ztratil zájem, možná i babička varovala před prací, pustil strom. Reinhard začal mírný vzestup. Ukázalo se, že strom byl „Reinhard Schleuder“. Zvedlo ho to a pak přistál docela hrubě na zemi. Naštěstí utrpěl pouze oděrky a „volno“ na celý den.</p>
+<p>Ukázalo se, že bukové ořechy jsou skutečným štěstím. Na podzim roku 1946 jich bylo více než kdykoli předtím do té doby. Nejprve, opět moje babička jako organizátorka, jsme šli do lesa sbírat (vybírat). Ale pak nám Herr Herold poskytl síto. S tím by se dalo nasbírat mnohem víc. Shrnuli  jste lesní půdu s  listím a vším dohromady, pak jste to vložili do síta a prosívali. Volná zemina propadla sítem, lehké listy se objevily a pokud jste je pak odstranili, měli jste v sítku většinou bukové ořechy. Shromáždili jsme tolik, že jsme z něj ještě na počátku padesátých let měli olej. V Altheimu byla postavena lisovna oleje, ve které byly lisovány bukové ořechy. Bylo také důležité mít Wehrmacht. Mohli jsme  sbírat plechovky od benzinu. My chlapci jsme za to byli zodpovědní.</p>
+<p>Stále nechápu, proč jsme nedostali myšlenku sbírat houby, ale v Damitzu jsme také vysadili celá pole s rajčaty a nedostal jsem myšlenku, že by mohly být jedlé.</p>
+<p>Při zpětném pohledu mám na Altheim krásné vzpomínky, i když jsme tam byli jen krátkou dobu (při psaní jsem si všiml, že jsme neřekli „... žil jsem tam ...“, ale „... byli jsme .. . “„ ..přišli jsme ... “,„ ..jsme v .. “) Byli jsme téměř stále místní komunitou Damnických. Nejprve jsme často navštěvovali další Damnické  v sousedních komunitách Waldstetten a Hainstadt. Ale život šel dál a mezi námi chlapci se vytvořila nová přátelství s jinými než Damnickými. Taková přátelství však vznikla hlavně s „dětmi uprchlíků“. Místní děti stěží dostaly čas na hraní, musely pracovat. Pro nás bylo nepochopitelné, do jaké míry je dětská práce normální.</p>
+<p>Chtěla jsem navštívit Ottilie minulý rok (1999), přišli jsme neohlášeně a nesetkali jsme se s ní. Určitě se to jednou podaří.<br>Kolem 10. prosince přišla překvapivá a příjemná zpráva, že můj otec byl „omilostněn“ a byl na transportu do Ulmu. Myslím, že zpráva přišla od dcery spoluvězně mého otce, pana Wandschury (používám německý pravopis). Dcera zůstala v Tullnitz / Dolenice. Jak a proč nevím. 14. prosince jsme se vydali z Altheimu do Ulmu: moje matka, můj strýc Josef (Hawle) a já. Takový výlet do Německa v zimě 1946/1947 si dnes těžko lze představit, takže podrobnější zpráva: V Altheimu jsme dostali informaci, že kolem 18:00 bude z nádraží v Rosenbergu vlak do Heilbronnu. Tam bychom měli spojení do Stuttgartu.</p>
+<p>Vydali jsme se pěšky do 8 km vzdáleného Rosenbergu. Tam jsme se dozvěděli, že toto vlakové spojení existuje, ale vlak nezastavil v Rosenbergu, ale pouze v Osterburkenu.</p>
+<p>Takže jsme šli do Osterburkenu,  Úředník železnice nám řekl, že nejkratší trasa byla po železniční trati. Byla tma, někde tam bylo trochu sněhu, keřů, kořenů a kdo ví, jaké další překážky byly v cestě. Také bylo už pozdě a tak jsme dorazili do Osterburkenu úplně vyčerpaní. Vzdálenost z Rosenbergu do Osterburkenu je dalších 7 km! Mohli jsme tam odpočívat, protože vlak měl zpoždění, ale projel do Stuttgartu.</p>
+<p>Těch několik vlaků v té době bylo přeplněných, a tak jsme byli rádi, že se nám v uličce podařilo získat dostatečně rozumné místo na stání. Brzy jsem usnul na matčině brašně, ne dlouho, byl jsem příliš zvědavý, abych zjistil, které stanice jsme míjeli a co se stalo, když vlak zastavil.</p>
+<p>Často se zastavovalo, většinou mimo vlaková nádraží. Většina mostů byla pouze provizorními mosty a pouze jednosměrnými, takže se s nimi dalo přejít pouze chůzí, nebo se muselo čekat na zpáteční vlak. Myslím, že to bylo po půlnoci, když jsme konečně dorazili do Stuttgartu.</p>
+<p>Opravdu na mě udělal dojem vlakové nádraží! Tolik kolejí. Z velké přijímací haly stály pouze okolní zdi a uvnitř byly 2 oplocené, obrovské otvory v podlaze.</p>
+<p>My, tj. moje matka a já jsme směli spát v domě Charity, dostali jsme postel, horní patro palandy jen pro nás !! Jaký luxus. (Nemyslím si, že by mě matka nechala spát sama v posteli, v té době se příliš bála, že by někdo mohl být ukraden nebo jinak ztracen!)</p>
+<p>Můj strýc musel strávit noc v čekárně pod věží. Domov Charity byl pouze pro matky a děti. Následujícího rána jsme šli přímo do Ulmu. Napětí rostlo s každým kilometrem, zejména moje matka ztratila klid, zcela nová mateřská zkušenost! Opravdu jsme odjeli bez jakýchkoli informací, ani jsme nevěděli, zda byl můj otec skutečně propuštěn, a pokud ano, zda vůbec dorazil transport. Ulmské vlakové nádraží sestávalo pouze z několika nízkých dřevěných staveb, střechy nástupiště pouze ocelové kostry. Pouze katedrála vyčnívala z jediné krajiny ruin. Bylo nám řečeno, že musíme jít do kasáren v Kienlesbergu, tranzitní tábor tam byl. Dodnes nechápu, proč byly školy a nemocnice skutečně zničeny bombami a ne kasárna Později, během mých školních dnů, jsem absolvoval poměrně rozsáhlou prohlídku Ulmských kasáren (Unterer Kuhbergkaserne, Bleidornkaserne, pozemková nemocnice, průkopnická kasárna), ve kterých byly školy umístěny, mám ale po Altheimu už nechodila škola, která byla umístěna ve školní budově! Před branami kasáren stálo mnoho mužů, kteří hledali příbuzné, a jaká radost, můj otec byl mezi nimi. Ukázalo se, že nesměli opustit tábor a trvalo dlouho, než jsme se dostali dovnitř, takže první pozdrav prošel železnou mřížkou brány. Spali jsme v táboře, bylo mi dovoleno spát na postýlce paní H. Wagnerové, učitelky mého bratra na komunitní škole v Misslitzu, mé matky s mým otcem. Chci říct, nedostali jsme přikrývky, ani jsme nesměli spát v táboře. Následujícího dne dostal můj otec „propustku“, abychom mohli podniknout malou prohlídku města. Moji rodiče toho moc neviděli, měli o čem mluvit. Na náměstí Münsterplatz byl zřízen první vánoční trh s kolotočem a houpačkou. Ve vídeňském Prátru jsem něco takového viděl jen jednou a byl jsem pochopitelně ohromen.</p>
+<p>Ukázalo se, že můj otec s námi do Altheimu rozhodně nepůjde. Musel počkat, až bude oficiálně propuštěn a bude mu přiděleno místo bydliště. Slíbil však, že na Vánoce přijde do Altheimu, v případě potřeby i ilegálně. Ve skutečnosti k nám dorazil odpoledne 24. prosince.</p>
+<p>Byly to hezké Vánoce, i bez dárků a stromečku. Otec řekl, že dostal místo na spaní v malé místnosti v ERBACHu a práci na železnici v oddělení údržby vagónů na hlavním nádraží v Ulmu.</p>
+<p>3. Erbach</p>
+<p>Jak již bylo řečeno výše, otec přišel do Altheimu na Vánoce, konečně jsme měli alespoň na pár dní pomoc při tvrdé práci. Mohli jsme vyzvednout Stera Holze, který nám byl přidělen v lese. Jinak si však myslím, že to byla doba obtížných rozhodnutí pro naše rodiče: Měl by k nám přijít otec do Altheimu, nebo bychom se k němu měli nastěhovat do Erbachu. Rozhodujícím faktorem pro rozhodnutí jsme byli pravděpodobně my chlapci: Rodiče neviděli ve vzdáleném Altheimu žádnou naši  budoucnost. V té době bylo takové rozhodnutí konečné. Z důvodu stávajících předpisů vám v zásadě nebylo umožněno změnit místo pobytu. Jedinou výjimkou bylo, když se jednalo o sloučení rodiny, ale ani to nebylo možné provést bez svolení.</p>
+<p>Po novém roce tedy otec odjel zpět do Erbachu, ale po několika týdnech se úplně znervózněl a vrátil se do Altheimu. Měl problémy se získáním „povolení k stěhování“ pro nás. Jeho dvouhodinová procházka z vlakového nádraží v Rosenbergu do Altheimu mu pak dodala odvahu pokračovat v boji za naši imigraci v Erbachu. Nakonec však přišla zpráva, že stěhování bylo schváleno.</p>
+<p>Musíte pochopit, že rozhodnutí opustit Altheim znamenalo také vzdát se vesnické komunity Damitz, která stále po částech existuje, a přestěhovat se na místo, kde neznáte jedinou osobu. Dnes to není neobvyklé, ale příběh je z roku 1947, což byla úplně jiná doba. Později se ukázalo, že stejný krok se rozhodla udělat rodina z Tullnitzu, Johann a Marie Schiffnerovi, stejně jako rodina Albin Zeihsel z Damitzu, kteří se přestěhovali do asi 8 km vzdáleného Beiningenu.</p>
+<p>Společnost „Moving“ jsme založili v chladný den v březnu 1947. To, co dnes můžeme udělat autem za necelé 3 hodiny, byla pak třídenní dobrodružná cesta vlakem. I při našem skromném majetku bylo vhodné jej na okamžik neztratit z dohledu. První etapa byla z Altheimu do Osterburkenu s vratkým nákladním vozem na dřevo. Tam jsme strávili noc v nevytápěné čekárně. Na další vývoj událostí si nevzpomínám. Začíná to znovu odpoledne poté v Erbachu. Na stanici nám zapůjčili větší vozík s nakládací plošinou. Potom jsme naložili věci a přesunuli se, čtyři muži, do našich nových pokojů. Bylo to na Hauptstrasse 16, v domě Amann, „Jauzes“, jak se dům nazývá. Tam jsme zažili náš první obrovský šok související s „komunitou osudu“. Když jsme vyložili zavazadla, nebylo to tolik a uložili jsme je do místnosti o rozloze přibližně 12 metrů čtverečních, matka požádala obyvatele, aby si mohli uvařit čaj na kuchyňském sporáku. Od Altheimu jsme neměli nic teplého. Tato žádost byla zamítnuta, protože kamna potřebovali sami. Bylo to jediný čas, během kterého jsem viděl matku plakat. Později toho večera jsme dostali šálek studeného mléka.</p>
+<p>Hospodáři byli špatní lidé, i když chodili do kostela téměř každý den! Mladá Frau Amann měla tak dobré srdce, že nabídla matce modlit se za nás a náš osud v církvi; řekla, že musíme být velmi špatní lidé, protože nás za to Bůh potrestal. Matka jí praktičtěji poděkovala, ale řekla, že kdyby byla tak laskavá, dala by raději trochu mléka pro své chlapce před modlitbou. Frau Amann ji poté urazila něčím jako „bezbožný cikánský balíček“, teď jsme byli bez modlitby a samozřejmě bez mléka.</p>
+<p>Ale rád bych také poznamenal, že katolický místní farář Schellmann to také nepřehnal s  křesťanskou charitu. Podle mého názoru přispěl poměrně malým způsobem ke zmírnění množství „uprchlíků“, nebyl zdaleka dobrým příkladem pro svou komunitu.</p>
+<p>Jaký byl takový život, který jsme vedli?  Malý pokoj neumožňoval uspořádání 2 lůžek. Měli jsme postel a slámu v matracích Tento slámový pytel byl během dne položen na postel, aby se člověk mohl pohybovat po místnosti. Myslím, že jsme měli malý elektrický sporák, který matka mohla použít k vaření něčeho teplého. Neměli jsme stůl ani židli, jen stoličku. Krabice sloužila jako stůl. Manfred a já jsme měli ještě několik týdnů volného času na prozkoumání této oblasti.</p>
+<p>Když to naši rodiče nemohli déle odkládat, museli jsme konečně jít do školy. Manfred přišel do třídy ředitele Schwarzwälder, já do třídy Staudachera v bývalém domě HJ, třída s asi 120 studenty, učebna ve tvaru písmene L. Studenti, kteří seděli v rohu krátké nohy, nikdy neviděli svého učitele. Protože jsem chodil do školy v Erbachu celkově asi 8 týdnů, nechci do školy chodit.</p>
+<p>Na konci dubna nám byl přidělen nový životní prostor, na Wagnerstrasse 8 na „Wagner Volz“. Lidé nebyli ani příliš přátelští, ale ve svém rámci byli chápaví a nápomocní. Cítili jsme se jako v ráji, 16 metrů čtverečních, plus samostatný vchod s malou chodbou, WC pro nás a dřevník! Kohoutek před domem, abychom nemuseli žebrat o vodu, jako tomu bylo v Amannově domě. Navíc nám byl přidělen malý pokoj v sousedním domě, kde Manfred spal. V Taubriedu byly přiděleny „uprchlické zahrady“, dostali jsme také jednu, 200 metrů čtverečních, v té době standardní velikosti. Dostat se tam bylo možné za téměř 30 minut chůze, ale to bylo v té době téměř normální.</p>
+<p>Někdy v roce 1948 jsme dostali také ruční vozík. To bylo v době, kdy jsem šel sbírat trus koní na ulici jako hnojivo pro naši zahradu. Manfred šel na pilu Rapp do výroby krabiček . Získali jsme za to dřevěný odpad. Od podzimu 1947 jsem šel do Ulmu na střední školu Kepler, která byla v té době umístěna v kasárnách ve pevnosti „Unterer Kuhberg“.(Od roku 1948 v bývalé nemocnici na Michelsbergu.) Manfred zahájil v roce 1949 učení ve společnosti Zwick v Einsingenu</p>
+<p>Mojími spoluhráči v té době byli hlavně chlapci z Mödritzu u Brna, kteří se zúčastnili nechvalně známého pochodu smrti Brňanů a poté se dostali do Německa přes Rakousko. Jeden z kamarádů, Walter Seidel, syn bývalého starosty Mödritzu, zaklepal jednoho dne (1949?) na okno, za kterým byla  moje postel, brzy ráno. Jeho otec ho poslal, protože můj otec by měl ráno naléhavě přijít na radnici. Protože zpráva byla tak naléhavá, otec odešel.</p>
+<p>Tam se sešli někteří muži, uprchlíci a místní obyvatelé a byl jim představen projekt osady s vlastními domy na Hoferinwegu. Později, po bolesti hlavy pro otce i matku, se rozhodli požádat o takový dům. Stavební náklady byly odhadnuty na 15 000 DM. Na tu dobu obrovská suma. Dostali jsme smlouvu. V létě roku 1950 byla zahájena stavba a v červnu 1951 jsme se přestěhovali do našeho vlastního domu.<br>Ale zpočátku to nebylo tak daleko. Abychom ušetřili peníze, provedli jsme výkopové práce pro suterén a základy sami. To se bohužel shodovalo s plánovanou cykloturistikou se skupinou mládeže. Rodiče trvali na tom, že bych neměl jít, dokud jsme kopání nedokončili. Od té doby pracovalo u našeho domu 10 a více chlapců každý den, pomáhali také Martin Wilderotter a jeho strýc Franz Turner. Možná jsme byli všichni v cestě, než abychom pomáhali, ale každopádně výkop suterénu a základové příkopy byly připraveny na začátku naší prohlídky.</p>
+<p>Nyní zbývá objasnit, odkud mám kolo. Docela jednoduše: V té době byla ještě všude divoká skládka odpadu, v Erbachu hlavně „Kachelesberg“. Hledal jsem staré součásti jízdních kol tam a na všech místech v oblasti v okruhu asi 6 kilometrů. Trvalo to téměř 2 roky, ale pak jsem měl pracovní kolo. Měl různé velikosti pneumatik na předních a zadních kolech, ale jel spolehlivě. Namaloval jsem rám modře, blatníky stříbrným bronzem. S tím jsem měl kolo, které se navenek dost přiblížilo vkusu doby. Technicky to bylo trochu pozadu.</p>
+<p>V červnu 1951 byl nový dům připraven a my jsme se mohli nastěhovat. Tímto přestěhováním do nového domu pro nás takzvané „období uprchlíků“ skutečně skončilo.</p>
+</section>
+<section id="historicke-souvislosti"><h2>Historické souvislosti</h2>
+<p>(ne úplně bez komentářů)</p>
+<p>Damice se nachází na jižní Moravě, která je již dlouho krajem v rámci habsburské říše, s členem habsburské rodiny jako hrabě nebo císařem jako hrabě , v personální unii. Morava byla tedy také součástí rakousko-uherské monarchie. Po celý středověk však byla spolu s Čechami součástí „Svaté říše římské německého národa“. Díky speciální konstrukci to tak zůstalo až do konce roku 1806. Kromě toho bylo do roku 1866, např. B. delegáty na církevním shromáždění sv. Pavla v roce 1848.</p>
+<p>V roce 1918, kdy se monarchie rozpadla, se Československo vytvořilo z Čech, Moravy, Slovenska a Slezska s hlavním městem Prahou. V novém státě žilo asi 3 500 000 občanů německé národnosti a jazyka, „sudetských Němců“. Tato skupina obyvatel zpočátku odmítla žít v tomto státě, ale jejich demokratické hlasování o připojení jejich sídelních oblastí k Německu nebo ke zbytku Rakouska nebylo mezinárodně slyšeno.</p>
+<p>Takové oddělení německy mluvících oblastí bylo ve skutečnosti problematické, protože by roztrhalo oblasti, které po staletí tvořily jednotku. Čechy a Morava existovaly po staletí v nezměněných hranicích, o kterých se nikdy nepochybovalo. Byli také jako celek členy Svaté říše římské i habsburské monarchie.</p>
+<p>Proto takové „žádosti o přidružení“ neměly žádnou historickou legitimitu, ani Češi netvrdili, že země je výlučně „česká“. Kvůli tomuto tvrzení, že se jedná o českou zemi, nová česká vláda popřela sudetským Němcům, kteří tam žijí, status „státního lidu“. Poskytlo jim to pouze status menšiny. Populace 30% z celkové populace .</p>
+<p>Masaryk, první prezident, je dokonce nazýval „přistěhovalci a kolonisty“, i když věděl, že v zemi žili téměř 800 let a že většinu „českých“ měst založili ve  13. století Němci.</p>
+<p>Němci neměli v letech po první světové válce žádnou podporu v mezinárodní politice, a tak mohli Češi prosazovat své představy o novém státě a také mohli v německy mluvících oblastech prosazovat přísnou politiku čechizace.</p>
+<p>To zase podpořilo pocit sounáležitosti mezi sudetskými Němci a v následujících letech se „sudetoněmecká strana“, SdP, dokonce stala nejsilnější frakcí v československém parlamentu.</p>
+<p>Když se česká politika vydala rozumnějším směrem, Masaryk se v roce 1925 dokonce omluvil za výraz „přistěhovalci a kolonisté“, sudetští Němci začali stále více přijímat nový stát, i když korekce kurzu neznamenala konec diskriminace.</p>
+<p>Ale pak, ve 30. letech, vnější vliv zesílil. Zejména proto, že Německo opět zesílilo, mnoho sudetských Němců Německo fascinovalo, také je fascinovaly úspěchy Hitlerovy politiky.</p>
+<p>I když se česká politika pokusila krok za krokem uspokojit požadavky sudetských Němců, bylo příliš pozdě na to, aby ubohou politiku dvacátých let napravila. SdP se stále více dostávala pod vliv národních socialistů (NSDAP).</p>
+<p>Německý tlak na českou vládu se zvýšil. Francie a Anglie jako ručitelské mocnosti ČSR naznačily, že nebudou vést válku za stát, který popírá 3,5 milionům svých občanů stejná práva se zbytkem občanů. V roce 1938 došlo k Mnichovským smlouvám s tím výsledkem, že „Sudety“ byly odděleny od ČSR a začleněny do Německé říše.</p>
+<p>To byla katastrofa pro zbytek ČSR, protože jak již bylo zmíněno výše, hranice, které existovaly po staletí byly zrušeny a zakresleny hranice nové, které nebyly přirozenými, ale pouze jazykovými hranicemi.</p>
+<p>Takové nerovnoměrné vymezení přerušilo dopravní trasy a narušilo obchodní vztahy.</p>
+<p>Tehdy také Hitler-Německo porušilo mnichovské smlouvy. Obsadilo západní část ČSR, Čechy a Morava se staly „říšským protektorátem Čechy a Morava“. Na druhé straně se Slovensko prohlásilo za nezávislé, ale s fašistickou vládou se prakticky stalo německým satelitním státem.</p>
+<p>Když se podíváte na mapu a vezmete v úvahu, že Hitler rozhodně chtěl válku, snadno uvidíte, že Hitler začlenil ČSR do své sféry vlivu ze strategických důvodů, ne z lásky k sudetským Němcům. Zajímavý byl také český průmyslový potenciál pro německý zbrojní průmysl.</p>
+<p>Češi to možná nechtějí slyšet, ale drtivá většina českých dělníků pracovala v tomto systému bez odporu, dalo by se také říci, že se systémem spolupracovali, dokud válka trvala. Vyráběli dobré a spolehlivé zbraně s vyspělou technologií. Setkal jsem se s mužem, který mi hrdě řekl, že továrna, ve které pracoval a ve které byl jeho otec zástupcem ředitele, vybavila 10 000 stíhacích letounů Messerschmitt palubními děly. Tato spolupráce skončila koncem války.</p>
+<p>Polské noviny „Gazeta Wyborzca“ nedávno zastávaly názor, že čím intenzivnější spolupráce s Němci probíhala v okupovaných zemích, tím horší byly excesy po válce proti Němcům.</p>
+<p>Poznámka: Dr. Paudling z Truman State University (USA) ve svém filmu o Sudetech říká, že zemi po staletí dominoval jeden jazyk. Během této doby však význam druhého jazyka vzrostl, až nakonec převzal dominanci.</p>
+<p>Rád bych pokračoval v tomto myšlenkovém kurzu: Dominance jednoho jazyka dala druhému jazyku šanci a příležitost se rozvíjet. Tento druhý jazyk naopak potřeboval pouze 25 let dominance, aby eliminoval populaci v prvním jazyce v zemi zabíjením a vysídlením</p>
+<p>Shrnutí myšlenek:</p>
+<p>1-první historická chyba.</p>
+<p>V průběhu polemiky o národnosti v minulém století vedla česká strana svůj boj z Prahy, zatímco německá strana ho vedla hlavně z Vídně. I když byla Vídeň hlavním městem monarchie, byla mimo oblasti kudy konečný spor šel. Čeští Němci víceméně nechali Prahu Čechům. Ale byla to Praha, kde hrála „hudba“. Výsledkem bylo, že Češi mohli relativně snadno vyloučit sudetoněmecké představitele jako de facto cizince při jednáních o vzniku státu v roce 1918. (A to i při lži, že neexistují žádné uzavřené německy mluvící oblasti!)</p>
+<p>2-druhá historická chyba</p>
+<p>Nová česká správa sledovala v sudetoněmeckých oblastech přísný průběh čechizace, odsunula německý vliv co nejvíce zpět a omezila také občanská práva. Rovněž odmítla požadavky sudetských Němců na kulturní a jazykovou autonomii, Němci byli ve vládních agenturách zastoupeni dramaticky pod jejich podílem na populaci. Německý jazyk nebyl schválen jako úřední jazyk. Česká vláda udělala vše pro to, aby zabránila německému obyvatelstvu ve ztotožnění se s novým státem . Když však český stát nařídil vojenskou mobilizaci během „sudetské krize“, drtivá většina německých záložníků tuto výzvu následovala a dobře věděla, že v případě války by museli bojovat proti Němcům.</p>
+<p>3-Mnichovské smlouvy</p>
+<p>Politické spektrum sudetských Němců mělo zpočátku normální tvář se sociálními demokraty, křesťanskými demokraty, rolnickou unií atd. Kvůli politice, kterou zastupovali Masaryk a Beneš, se stále více shromažďovali v rámci SdP Konrada Henleina, až nakonec získalo 87% hlasů sudetoněmeckých sil nejsilnější stranou v zemi.</p>
+<p>Když se probudil Hitlerův zájem o sudetoněmeckou otázku, bylo pro něj snadné po zkušenostech s restriktivní českou politikou dvacátých a počátku třicátých let jmenovat se zachráncem a ochráncem sudetských Němců. Faktem však je, že taková spása již v tomto okamžiku nebyla nutná!</p>
+<p>I když byla česká strana nyní díky mezinárodnímu tlaku připravena udělat značné ústupky, sudetští Němci se začali čím dál více obracet k „novému Německu“.</p>
+<p>4-mnichovské smlouvy 2</p>
+<p>V důsledku tohoto mezinárodního tlaku vypracovala Benešova vláda plány pro konference v Mnichově a Bad Godesbergu, jejichž cílem bylo do značné míry vyhovět požadavkům sudetských Němců.</p>
+<p>Česká vláda se ve dnech 4. až 5. května 1938 se dostala pod další tlak z radikální poptávky po autonomii Slováků. Nyní bylo zřejmé, že je třeba zpochybnit celou strukturu ČSR.</p>
+<p>SdP jako zástupce sudetských Němců již nemohla v době českých ústupků svobodně vyjednávat; byla již z velké části dálkově ovládána hitlerovským Německem.</p>
+<p>Bez ohledu na výsledek nadcházejících konferencí byl Hitler rozhodnut zaútočit na Československo 1. října 1938.Taková agrese by v tomto okamžiku byla nemožná, kdyby Beneš již učinil ústupky, na které by byl připraven až  v roce 1938, například v roce 1935. Pak by CSR neztratila mezinárodní podporu a Hitler by neměl žádnou záminku k osvobození „Němců ze Sudet“.</p>
+<p>Faktem je také to, že nestoudná národnostní politika  Masaryka a Beneše vedla ke ztrátě podpory ze strany garančních sil Anglie a Francie. Britský premiér ve svém projevu ze dne 14. března 1938 prohlásil, že jakoukoli britskou podporu pro ČSR učiní závislou na podstatných ústupcích zemi sudetských Němců v boji pouze za to, aby mohla nadále upírat 3,461 milionu svých občanů právo na sebeurčení.</p>
+<p>5-Benes-Stalinova smlouva</p>
+<p>Ve svém exilu Beneš bojoval za souhlas spojenců, aby bylo možné po válce vyhnat sudetoněmecké obyvatelstvo z ČSR.         V roce 1943 získal Stalinův souhlas se smlouvou, která zaručovala Sovětskému svazu podstatný vliv v poválečné ČSR, včetně znárodnění průmyslu v německých oblastech. V důsledku této smlouvy přiměla Moskva ČSR, aby v roce 1947 odmítla nabídku účastnit se Marshallova plánu pro rekonstrukci Evropy. Tímto způsobem se ČSR oddělila od hospodářského oživení západní Evropy, včetně západního Německa. Vedlo to přímo k uchopení moci komunisty v roce 1948.</p>
+<p>6-Sudetští Němci</p>
+<p>Postupem času byli vystěhovaní sudetští Němci integrováni do západoněmecké společnosti. Založili města, postavili továrny se znalostmi, dovednostmi a pečlivostí, které si s sebou přinesli. Ukázalo se, že jsou podstatným garantem politické stability západního Německa, a přispěli svým dílem k uskutečnění německého hospodářského zázraku.</p>
+<p>Nemyslím si, že by se dnes mnoho lidí chtělo vrátit do své původní vlasti, aby tam žili. Československo se naopak dostalo pod komunistickou diktaturu také jako cenu, kterou byl Beneš ochoten zaplatit Stalinovi za vyhoštění sudetských Němců, a musel to vydržet 42 let.</p>
+<p>Před válkou byla ČSR jednou z předních evropských průmyslových zemí. Že to bylo i po válce v komunistickém bloku. Prohrál však se západními průmyslovými zeměmi a technologicky (nejen!) zaostal, což bude muset ještě dlouho dohánět.</p>
+<p>I po vyloučení sudetoněmecké populace zůstane faktem, že polovina ČSR je obklopena 100 miliony Němců v Německu a Rakousku. To také v budoucnu způsobí problémy, zejména pokud jde o kulturní identitu, kterou je třeba vyřešit, aniž by bylo možné vyhnat Němce ze sousedních oblastí!</p>
+<p>Obávám se, že některým českým politikům v hlavě ještě zůstaly zbytky myšlení Edvarda Beneše. Po roce 1990 mohli snadno uklidnit sudetoněmecké krajany s drobnými ústupky, což by z nich udělalo přátele. To neudělali, takže požadavky byly čím dál dalekosáhlejší a získávají stále více mezinárodní pozornosti. Historie se opakuje v malém měřítku, bude se opakovat tak dlouho, dokud nebude člověk připraven vyvodit poučení a vyvodit závěry.</p>
+<p>Závěrečná poznámka</p>
+<p>V žádném případě to není můj záměr omluvit trestní politiku hitlerovského Německa. Myslím, že o tom není pochyb, a to je dobře zdokumentováno. Na co bych ale rád upozornil, je ignorantská česká politika v „první republice“, která nakonec vedla ČSR do slepé uličky.</p>
+<p>Prezident Havel nedávno obvinil sudetské Němce z neloajality českému státu, a tak vyhoštění zdůvodnil jako legitimní. Měl by však mít také na paměti, že česká vláda byla dříve neloajální vůči svým německy mluvícím občanům! Sudetští Němci touto politikou trpěli násilně a brutálně. Česká populace stále trpí a bude muset trpět dlouho, déle než sudetští Němci.</p>
+<p>Jak je uvedeno jinde: Vstupem ČR do EU jsou splněny všechny původní požadavky sudetských Němců, pokud existovaly v roce 1990. Automaticky na základě stávajících právních předpisů EU. Pro českou politiku je nyní opět tragédií, o které se nemůže sama přesvědčit, že sudetští Němci a jejich potomci naleznou určité uspokojení pouze prostřednictvím předpisů přicházejících zvenčí. Tímto způsobem se otevírá cesta k dalším požadavkům, kterým by mohla snadno zabránit vlastním úsilím.</p>
+<p>Napsal úvahu napsal Gerhard Hanák  v srpnu 2000</p>
+<p>Poznámka autora : Nechci zde dávat lekci z historie, ale spíše vyjádřit svůj názor na uvedené téma.</p>
+<p>Pokud vás však zajímají komplexní informace o historii Němců v Čechách a na Moravě, doporučujeme následující webovou adresu: Doporučena historie Sudet. Adresa je komplikovaná, obsah komplexní a snadno srozumitelný. Jinak: Ferdinand Seibt: série „Německo a Češi, historie sousedství uprostřed Evropy“ série Piper; Prince: „Německé dějiny v Čechách a na Moravě“.</p>
+</section>
+<section id="pout-do-maria-dreieichen"><h2>Pouť  do Maria Dreieichen!</h2>
+<p>Noc pře cestou:</p>
+<p>Dlouho milované přání by se nyní mělo splnit. Jako dítě jsem tam byl jednou se svou matkou, ale vlakem v té době už nebyly žádné poutě pěšky. Ale teď to chceme udělat.</p>
+<p>Queeny se zcela spontánně rozhodla jít také , i když s Damnitzem nebo Damnitzovou poutí nemá absolutně žádný vztah.</p>
+<p>Pokud to projdeme, pravděpodobně budu první Damnitzer, který touto cestou prošel po roce 1945 . Všechno bylo připraveno, přenocování bylo rezervováno předem a bylo také dohodnuto s Hanákem Albinem v Socherlu / Suchohrdly, že u něho  můžeme na tyto dny zaparkovat auto. Batoh jsem už třikrát zabalil a vybalil, ale nyní uvnitř není opravdu nic zbytečného. Queeny řekne, že mám u sebe příliš mnoho triček, ale jsou jen 3.</p>
+</section>
+<section id="setkani-rodaku-v-geislingenu-r-2000"><h2>Setkání  rodáku  v Geislingenu r. 2000</h2>
+<p>Je udivující, že po 54 letech mezi bývalými Damitzery stále existuje pocit sounáležitosti. To ukazuje, že letos se v Geislingenu setkalo více než 40 Damitzerů a jejich potomků. Nechci předcházet Edmundově zprávě v „Südmährer“, ale internet je rychlejší než tištěný časopis.</p>
+<p>Tady</p>
+<p>Pár fotek ze schůzky v roce 2000, jen pár fotek, které jsem pořídil, další budou vděčně přijaty a zveřejněny zde se jménem fotografa na vyžádání.</p>
+<p>Někdy, vždy po setkání Geislingenů, jsem v pokušení znovu převzít iniciativu na „výlet po Moravě“. I když to v minulosti bylo trochu nešťastné.</p>
+<p>Brzy přepracuji celý Damitzův web. Bylo by dobré, kdybyste mi mohli poslat staré obrázky (zaručeně vrátím zpět!). Věřím, že pokud budeme aktivně zastoupeni na internetu, můžeme naši starou vlast také využít k následujícím účelům</p>
+<p>Udělejte generaci atraktivní a zajímavou. Staré příběhy jsou zajímavé, pouze pokud jsou prezentovány v nových šatech.</p>
+<p>Další historická fotografie z 50. let, kdy se setkání stále konalo v městském parku, ten  s pivním  hrnkem v ruce je můj otec. Vpravo na pozadí vidíte Edmunda, našeho současného správce stránek..</p>
+<p>8. Dobové fotografie</p>
+<p>Rodinné album Hanak se pomalu rozšiřuje do alba Damitz. Díky odesílatelům.</p>
+</section>
+
+      <section id="fotogalerie">
+        <h2>Fotogalerie</h2>
+        <div class="gallery">
+          <figure class="g-item">
+  <a href="assets/gallery/hanak_image1.jpeg" class="lightbox" data-src="assets/gallery/hanak_image1.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image1.jpeg" alt="hanak_image1.jpeg">
+  </a>
+  <figcaption>hanak_image1.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image10.jpeg" class="lightbox" data-src="assets/gallery/hanak_image10.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image10.jpeg" alt="hanak_image10.jpeg">
+  </a>
+  <figcaption>hanak_image10.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image100.jpeg" class="lightbox" data-src="assets/gallery/hanak_image100.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image100.jpeg" alt="hanak_image100.jpeg">
+  </a>
+  <figcaption>hanak_image100.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image101.jpeg" class="lightbox" data-src="assets/gallery/hanak_image101.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image101.jpeg" alt="hanak_image101.jpeg">
+  </a>
+  <figcaption>hanak_image101.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image102.jpeg" class="lightbox" data-src="assets/gallery/hanak_image102.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image102.jpeg" alt="hanak_image102.jpeg">
+  </a>
+  <figcaption>hanak_image102.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image103.jpeg" class="lightbox" data-src="assets/gallery/hanak_image103.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image103.jpeg" alt="hanak_image103.jpeg">
+  </a>
+  <figcaption>hanak_image103.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image104.jpeg" class="lightbox" data-src="assets/gallery/hanak_image104.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image104.jpeg" alt="hanak_image104.jpeg">
+  </a>
+  <figcaption>hanak_image104.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image105.jpeg" class="lightbox" data-src="assets/gallery/hanak_image105.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image105.jpeg" alt="hanak_image105.jpeg">
+  </a>
+  <figcaption>hanak_image105.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image106.jpeg" class="lightbox" data-src="assets/gallery/hanak_image106.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image106.jpeg" alt="hanak_image106.jpeg">
+  </a>
+  <figcaption>hanak_image106.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image107.jpeg" class="lightbox" data-src="assets/gallery/hanak_image107.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image107.jpeg" alt="hanak_image107.jpeg">
+  </a>
+  <figcaption>hanak_image107.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image108.jpeg" class="lightbox" data-src="assets/gallery/hanak_image108.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image108.jpeg" alt="hanak_image108.jpeg">
+  </a>
+  <figcaption>hanak_image108.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image109.jpeg" class="lightbox" data-src="assets/gallery/hanak_image109.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image109.jpeg" alt="hanak_image109.jpeg">
+  </a>
+  <figcaption>hanak_image109.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image11.jpeg" class="lightbox" data-src="assets/gallery/hanak_image11.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image11.jpeg" alt="hanak_image11.jpeg">
+  </a>
+  <figcaption>hanak_image11.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image110.jpeg" class="lightbox" data-src="assets/gallery/hanak_image110.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image110.jpeg" alt="hanak_image110.jpeg">
+  </a>
+  <figcaption>hanak_image110.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image111.jpeg" class="lightbox" data-src="assets/gallery/hanak_image111.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image111.jpeg" alt="hanak_image111.jpeg">
+  </a>
+  <figcaption>hanak_image111.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image112.jpeg" class="lightbox" data-src="assets/gallery/hanak_image112.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image112.jpeg" alt="hanak_image112.jpeg">
+  </a>
+  <figcaption>hanak_image112.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image113.jpeg" class="lightbox" data-src="assets/gallery/hanak_image113.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image113.jpeg" alt="hanak_image113.jpeg">
+  </a>
+  <figcaption>hanak_image113.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image114.jpeg" class="lightbox" data-src="assets/gallery/hanak_image114.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image114.jpeg" alt="hanak_image114.jpeg">
+  </a>
+  <figcaption>hanak_image114.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image115.jpeg" class="lightbox" data-src="assets/gallery/hanak_image115.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image115.jpeg" alt="hanak_image115.jpeg">
+  </a>
+  <figcaption>hanak_image115.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image116.jpeg" class="lightbox" data-src="assets/gallery/hanak_image116.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image116.jpeg" alt="hanak_image116.jpeg">
+  </a>
+  <figcaption>hanak_image116.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image117.jpeg" class="lightbox" data-src="assets/gallery/hanak_image117.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image117.jpeg" alt="hanak_image117.jpeg">
+  </a>
+  <figcaption>hanak_image117.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image118.jpeg" class="lightbox" data-src="assets/gallery/hanak_image118.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image118.jpeg" alt="hanak_image118.jpeg">
+  </a>
+  <figcaption>hanak_image118.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image119.jpeg" class="lightbox" data-src="assets/gallery/hanak_image119.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image119.jpeg" alt="hanak_image119.jpeg">
+  </a>
+  <figcaption>hanak_image119.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image12.jpeg" class="lightbox" data-src="assets/gallery/hanak_image12.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image12.jpeg" alt="hanak_image12.jpeg">
+  </a>
+  <figcaption>hanak_image12.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image13.jpeg" class="lightbox" data-src="assets/gallery/hanak_image13.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image13.jpeg" alt="hanak_image13.jpeg">
+  </a>
+  <figcaption>hanak_image13.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image14.jpeg" class="lightbox" data-src="assets/gallery/hanak_image14.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image14.jpeg" alt="hanak_image14.jpeg">
+  </a>
+  <figcaption>hanak_image14.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image15.jpeg" class="lightbox" data-src="assets/gallery/hanak_image15.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image15.jpeg" alt="hanak_image15.jpeg">
+  </a>
+  <figcaption>hanak_image15.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image16.jpeg" class="lightbox" data-src="assets/gallery/hanak_image16.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image16.jpeg" alt="hanak_image16.jpeg">
+  </a>
+  <figcaption>hanak_image16.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image17.jpeg" class="lightbox" data-src="assets/gallery/hanak_image17.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image17.jpeg" alt="hanak_image17.jpeg">
+  </a>
+  <figcaption>hanak_image17.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image18.jpeg" class="lightbox" data-src="assets/gallery/hanak_image18.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image18.jpeg" alt="hanak_image18.jpeg">
+  </a>
+  <figcaption>hanak_image18.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image19.jpeg" class="lightbox" data-src="assets/gallery/hanak_image19.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image19.jpeg" alt="hanak_image19.jpeg">
+  </a>
+  <figcaption>hanak_image19.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image2.jpeg" class="lightbox" data-src="assets/gallery/hanak_image2.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image2.jpeg" alt="hanak_image2.jpeg">
+  </a>
+  <figcaption>hanak_image2.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image20.jpeg" class="lightbox" data-src="assets/gallery/hanak_image20.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image20.jpeg" alt="hanak_image20.jpeg">
+  </a>
+  <figcaption>hanak_image20.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image21.jpeg" class="lightbox" data-src="assets/gallery/hanak_image21.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image21.jpeg" alt="hanak_image21.jpeg">
+  </a>
+  <figcaption>hanak_image21.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image22.jpeg" class="lightbox" data-src="assets/gallery/hanak_image22.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image22.jpeg" alt="hanak_image22.jpeg">
+  </a>
+  <figcaption>hanak_image22.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image23.jpeg" class="lightbox" data-src="assets/gallery/hanak_image23.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image23.jpeg" alt="hanak_image23.jpeg">
+  </a>
+  <figcaption>hanak_image23.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image24.jpeg" class="lightbox" data-src="assets/gallery/hanak_image24.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image24.jpeg" alt="hanak_image24.jpeg">
+  </a>
+  <figcaption>hanak_image24.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image25.jpeg" class="lightbox" data-src="assets/gallery/hanak_image25.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image25.jpeg" alt="hanak_image25.jpeg">
+  </a>
+  <figcaption>hanak_image25.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image26.jpeg" class="lightbox" data-src="assets/gallery/hanak_image26.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image26.jpeg" alt="hanak_image26.jpeg">
+  </a>
+  <figcaption>hanak_image26.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image27.jpeg" class="lightbox" data-src="assets/gallery/hanak_image27.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image27.jpeg" alt="hanak_image27.jpeg">
+  </a>
+  <figcaption>hanak_image27.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image28.jpeg" class="lightbox" data-src="assets/gallery/hanak_image28.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image28.jpeg" alt="hanak_image28.jpeg">
+  </a>
+  <figcaption>hanak_image28.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image29.jpeg" class="lightbox" data-src="assets/gallery/hanak_image29.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image29.jpeg" alt="hanak_image29.jpeg">
+  </a>
+  <figcaption>hanak_image29.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image3.jpeg" class="lightbox" data-src="assets/gallery/hanak_image3.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image3.jpeg" alt="hanak_image3.jpeg">
+  </a>
+  <figcaption>hanak_image3.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image30.jpeg" class="lightbox" data-src="assets/gallery/hanak_image30.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image30.jpeg" alt="hanak_image30.jpeg">
+  </a>
+  <figcaption>hanak_image30.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image31.jpeg" class="lightbox" data-src="assets/gallery/hanak_image31.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image31.jpeg" alt="hanak_image31.jpeg">
+  </a>
+  <figcaption>hanak_image31.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image32.jpeg" class="lightbox" data-src="assets/gallery/hanak_image32.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image32.jpeg" alt="hanak_image32.jpeg">
+  </a>
+  <figcaption>hanak_image32.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image33.jpeg" class="lightbox" data-src="assets/gallery/hanak_image33.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image33.jpeg" alt="hanak_image33.jpeg">
+  </a>
+  <figcaption>hanak_image33.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image34.jpeg" class="lightbox" data-src="assets/gallery/hanak_image34.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image34.jpeg" alt="hanak_image34.jpeg">
+  </a>
+  <figcaption>hanak_image34.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image35.jpeg" class="lightbox" data-src="assets/gallery/hanak_image35.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image35.jpeg" alt="hanak_image35.jpeg">
+  </a>
+  <figcaption>hanak_image35.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image36.jpeg" class="lightbox" data-src="assets/gallery/hanak_image36.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image36.jpeg" alt="hanak_image36.jpeg">
+  </a>
+  <figcaption>hanak_image36.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image37.jpeg" class="lightbox" data-src="assets/gallery/hanak_image37.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image37.jpeg" alt="hanak_image37.jpeg">
+  </a>
+  <figcaption>hanak_image37.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image38.jpeg" class="lightbox" data-src="assets/gallery/hanak_image38.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image38.jpeg" alt="hanak_image38.jpeg">
+  </a>
+  <figcaption>hanak_image38.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image39.jpeg" class="lightbox" data-src="assets/gallery/hanak_image39.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image39.jpeg" alt="hanak_image39.jpeg">
+  </a>
+  <figcaption>hanak_image39.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image4.jpeg" class="lightbox" data-src="assets/gallery/hanak_image4.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image4.jpeg" alt="hanak_image4.jpeg">
+  </a>
+  <figcaption>hanak_image4.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image40.jpeg" class="lightbox" data-src="assets/gallery/hanak_image40.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image40.jpeg" alt="hanak_image40.jpeg">
+  </a>
+  <figcaption>hanak_image40.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image41.jpeg" class="lightbox" data-src="assets/gallery/hanak_image41.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image41.jpeg" alt="hanak_image41.jpeg">
+  </a>
+  <figcaption>hanak_image41.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image42.jpeg" class="lightbox" data-src="assets/gallery/hanak_image42.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image42.jpeg" alt="hanak_image42.jpeg">
+  </a>
+  <figcaption>hanak_image42.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image43.jpeg" class="lightbox" data-src="assets/gallery/hanak_image43.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image43.jpeg" alt="hanak_image43.jpeg">
+  </a>
+  <figcaption>hanak_image43.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image44.jpeg" class="lightbox" data-src="assets/gallery/hanak_image44.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image44.jpeg" alt="hanak_image44.jpeg">
+  </a>
+  <figcaption>hanak_image44.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image45.jpeg" class="lightbox" data-src="assets/gallery/hanak_image45.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image45.jpeg" alt="hanak_image45.jpeg">
+  </a>
+  <figcaption>hanak_image45.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image46.jpeg" class="lightbox" data-src="assets/gallery/hanak_image46.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image46.jpeg" alt="hanak_image46.jpeg">
+  </a>
+  <figcaption>hanak_image46.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image47.jpeg" class="lightbox" data-src="assets/gallery/hanak_image47.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image47.jpeg" alt="hanak_image47.jpeg">
+  </a>
+  <figcaption>hanak_image47.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image48.jpeg" class="lightbox" data-src="assets/gallery/hanak_image48.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image48.jpeg" alt="hanak_image48.jpeg">
+  </a>
+  <figcaption>hanak_image48.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image49.jpeg" class="lightbox" data-src="assets/gallery/hanak_image49.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image49.jpeg" alt="hanak_image49.jpeg">
+  </a>
+  <figcaption>hanak_image49.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image5.jpeg" class="lightbox" data-src="assets/gallery/hanak_image5.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image5.jpeg" alt="hanak_image5.jpeg">
+  </a>
+  <figcaption>hanak_image5.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image50.jpeg" class="lightbox" data-src="assets/gallery/hanak_image50.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image50.jpeg" alt="hanak_image50.jpeg">
+  </a>
+  <figcaption>hanak_image50.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image51.jpeg" class="lightbox" data-src="assets/gallery/hanak_image51.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image51.jpeg" alt="hanak_image51.jpeg">
+  </a>
+  <figcaption>hanak_image51.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image52.jpeg" class="lightbox" data-src="assets/gallery/hanak_image52.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image52.jpeg" alt="hanak_image52.jpeg">
+  </a>
+  <figcaption>hanak_image52.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image53.jpeg" class="lightbox" data-src="assets/gallery/hanak_image53.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image53.jpeg" alt="hanak_image53.jpeg">
+  </a>
+  <figcaption>hanak_image53.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image54.jpeg" class="lightbox" data-src="assets/gallery/hanak_image54.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image54.jpeg" alt="hanak_image54.jpeg">
+  </a>
+  <figcaption>hanak_image54.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image55.jpeg" class="lightbox" data-src="assets/gallery/hanak_image55.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image55.jpeg" alt="hanak_image55.jpeg">
+  </a>
+  <figcaption>hanak_image55.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image56.jpeg" class="lightbox" data-src="assets/gallery/hanak_image56.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image56.jpeg" alt="hanak_image56.jpeg">
+  </a>
+  <figcaption>hanak_image56.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image57.jpeg" class="lightbox" data-src="assets/gallery/hanak_image57.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image57.jpeg" alt="hanak_image57.jpeg">
+  </a>
+  <figcaption>hanak_image57.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image58.jpeg" class="lightbox" data-src="assets/gallery/hanak_image58.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image58.jpeg" alt="hanak_image58.jpeg">
+  </a>
+  <figcaption>hanak_image58.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image59.jpeg" class="lightbox" data-src="assets/gallery/hanak_image59.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image59.jpeg" alt="hanak_image59.jpeg">
+  </a>
+  <figcaption>hanak_image59.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image6.jpeg" class="lightbox" data-src="assets/gallery/hanak_image6.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image6.jpeg" alt="hanak_image6.jpeg">
+  </a>
+  <figcaption>hanak_image6.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image60.jpeg" class="lightbox" data-src="assets/gallery/hanak_image60.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image60.jpeg" alt="hanak_image60.jpeg">
+  </a>
+  <figcaption>hanak_image60.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image61.jpeg" class="lightbox" data-src="assets/gallery/hanak_image61.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image61.jpeg" alt="hanak_image61.jpeg">
+  </a>
+  <figcaption>hanak_image61.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image62.jpeg" class="lightbox" data-src="assets/gallery/hanak_image62.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image62.jpeg" alt="hanak_image62.jpeg">
+  </a>
+  <figcaption>hanak_image62.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image63.jpeg" class="lightbox" data-src="assets/gallery/hanak_image63.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image63.jpeg" alt="hanak_image63.jpeg">
+  </a>
+  <figcaption>hanak_image63.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image64.jpeg" class="lightbox" data-src="assets/gallery/hanak_image64.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image64.jpeg" alt="hanak_image64.jpeg">
+  </a>
+  <figcaption>hanak_image64.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image65.jpeg" class="lightbox" data-src="assets/gallery/hanak_image65.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image65.jpeg" alt="hanak_image65.jpeg">
+  </a>
+  <figcaption>hanak_image65.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image66.jpeg" class="lightbox" data-src="assets/gallery/hanak_image66.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image66.jpeg" alt="hanak_image66.jpeg">
+  </a>
+  <figcaption>hanak_image66.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image67.jpeg" class="lightbox" data-src="assets/gallery/hanak_image67.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image67.jpeg" alt="hanak_image67.jpeg">
+  </a>
+  <figcaption>hanak_image67.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image68.jpeg" class="lightbox" data-src="assets/gallery/hanak_image68.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image68.jpeg" alt="hanak_image68.jpeg">
+  </a>
+  <figcaption>hanak_image68.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image69.jpeg" class="lightbox" data-src="assets/gallery/hanak_image69.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image69.jpeg" alt="hanak_image69.jpeg">
+  </a>
+  <figcaption>hanak_image69.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image7.jpeg" class="lightbox" data-src="assets/gallery/hanak_image7.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image7.jpeg" alt="hanak_image7.jpeg">
+  </a>
+  <figcaption>hanak_image7.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image70.jpeg" class="lightbox" data-src="assets/gallery/hanak_image70.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image70.jpeg" alt="hanak_image70.jpeg">
+  </a>
+  <figcaption>hanak_image70.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image71.jpeg" class="lightbox" data-src="assets/gallery/hanak_image71.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image71.jpeg" alt="hanak_image71.jpeg">
+  </a>
+  <figcaption>hanak_image71.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image72.jpeg" class="lightbox" data-src="assets/gallery/hanak_image72.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image72.jpeg" alt="hanak_image72.jpeg">
+  </a>
+  <figcaption>hanak_image72.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image73.jpeg" class="lightbox" data-src="assets/gallery/hanak_image73.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image73.jpeg" alt="hanak_image73.jpeg">
+  </a>
+  <figcaption>hanak_image73.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image74.jpeg" class="lightbox" data-src="assets/gallery/hanak_image74.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image74.jpeg" alt="hanak_image74.jpeg">
+  </a>
+  <figcaption>hanak_image74.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image75.jpeg" class="lightbox" data-src="assets/gallery/hanak_image75.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image75.jpeg" alt="hanak_image75.jpeg">
+  </a>
+  <figcaption>hanak_image75.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image76.jpeg" class="lightbox" data-src="assets/gallery/hanak_image76.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image76.jpeg" alt="hanak_image76.jpeg">
+  </a>
+  <figcaption>hanak_image76.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image77.jpeg" class="lightbox" data-src="assets/gallery/hanak_image77.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image77.jpeg" alt="hanak_image77.jpeg">
+  </a>
+  <figcaption>hanak_image77.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image78.jpeg" class="lightbox" data-src="assets/gallery/hanak_image78.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image78.jpeg" alt="hanak_image78.jpeg">
+  </a>
+  <figcaption>hanak_image78.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image79.jpeg" class="lightbox" data-src="assets/gallery/hanak_image79.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image79.jpeg" alt="hanak_image79.jpeg">
+  </a>
+  <figcaption>hanak_image79.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image8.jpeg" class="lightbox" data-src="assets/gallery/hanak_image8.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image8.jpeg" alt="hanak_image8.jpeg">
+  </a>
+  <figcaption>hanak_image8.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image80.jpeg" class="lightbox" data-src="assets/gallery/hanak_image80.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image80.jpeg" alt="hanak_image80.jpeg">
+  </a>
+  <figcaption>hanak_image80.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image81.jpeg" class="lightbox" data-src="assets/gallery/hanak_image81.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image81.jpeg" alt="hanak_image81.jpeg">
+  </a>
+  <figcaption>hanak_image81.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image82.jpeg" class="lightbox" data-src="assets/gallery/hanak_image82.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image82.jpeg" alt="hanak_image82.jpeg">
+  </a>
+  <figcaption>hanak_image82.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image83.jpeg" class="lightbox" data-src="assets/gallery/hanak_image83.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image83.jpeg" alt="hanak_image83.jpeg">
+  </a>
+  <figcaption>hanak_image83.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image84.jpeg" class="lightbox" data-src="assets/gallery/hanak_image84.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image84.jpeg" alt="hanak_image84.jpeg">
+  </a>
+  <figcaption>hanak_image84.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image85.jpeg" class="lightbox" data-src="assets/gallery/hanak_image85.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image85.jpeg" alt="hanak_image85.jpeg">
+  </a>
+  <figcaption>hanak_image85.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image86.jpeg" class="lightbox" data-src="assets/gallery/hanak_image86.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image86.jpeg" alt="hanak_image86.jpeg">
+  </a>
+  <figcaption>hanak_image86.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image87.jpeg" class="lightbox" data-src="assets/gallery/hanak_image87.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image87.jpeg" alt="hanak_image87.jpeg">
+  </a>
+  <figcaption>hanak_image87.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image88.jpeg" class="lightbox" data-src="assets/gallery/hanak_image88.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image88.jpeg" alt="hanak_image88.jpeg">
+  </a>
+  <figcaption>hanak_image88.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image89.jpeg" class="lightbox" data-src="assets/gallery/hanak_image89.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image89.jpeg" alt="hanak_image89.jpeg">
+  </a>
+  <figcaption>hanak_image89.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image9.jpeg" class="lightbox" data-src="assets/gallery/hanak_image9.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image9.jpeg" alt="hanak_image9.jpeg">
+  </a>
+  <figcaption>hanak_image9.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image90.jpeg" class="lightbox" data-src="assets/gallery/hanak_image90.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image90.jpeg" alt="hanak_image90.jpeg">
+  </a>
+  <figcaption>hanak_image90.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image91.jpeg" class="lightbox" data-src="assets/gallery/hanak_image91.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image91.jpeg" alt="hanak_image91.jpeg">
+  </a>
+  <figcaption>hanak_image91.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image92.jpeg" class="lightbox" data-src="assets/gallery/hanak_image92.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image92.jpeg" alt="hanak_image92.jpeg">
+  </a>
+  <figcaption>hanak_image92.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image93.jpeg" class="lightbox" data-src="assets/gallery/hanak_image93.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image93.jpeg" alt="hanak_image93.jpeg">
+  </a>
+  <figcaption>hanak_image93.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image94.jpeg" class="lightbox" data-src="assets/gallery/hanak_image94.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image94.jpeg" alt="hanak_image94.jpeg">
+  </a>
+  <figcaption>hanak_image94.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image95.jpeg" class="lightbox" data-src="assets/gallery/hanak_image95.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image95.jpeg" alt="hanak_image95.jpeg">
+  </a>
+  <figcaption>hanak_image95.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image96.jpeg" class="lightbox" data-src="assets/gallery/hanak_image96.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image96.jpeg" alt="hanak_image96.jpeg">
+  </a>
+  <figcaption>hanak_image96.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image97.jpeg" class="lightbox" data-src="assets/gallery/hanak_image97.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image97.jpeg" alt="hanak_image97.jpeg">
+  </a>
+  <figcaption>hanak_image97.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image98.jpeg" class="lightbox" data-src="assets/gallery/hanak_image98.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image98.jpeg" alt="hanak_image98.jpeg">
+  </a>
+  <figcaption>hanak_image98.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/gallery/hanak_image99.jpeg" class="lightbox" data-src="assets/gallery/hanak_image99.jpeg">
+    <img loading="lazy" src="assets/gallery/hanak_image99.jpeg" alt="hanak_image99.jpeg">
+  </a>
+  <figcaption>hanak_image99.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image1.jpeg" class="lightbox" data-src="assets/docx/image1.jpeg">
+    <img loading="lazy" src="assets/docx/image1.jpeg" alt="image1.jpeg">
+  </a>
+  <figcaption>image1.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image10.jpeg" class="lightbox" data-src="assets/docx/image10.jpeg">
+    <img loading="lazy" src="assets/docx/image10.jpeg" alt="image10.jpeg">
+  </a>
+  <figcaption>image10.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image11.jpeg" class="lightbox" data-src="assets/docx/image11.jpeg">
+    <img loading="lazy" src="assets/docx/image11.jpeg" alt="image11.jpeg">
+  </a>
+  <figcaption>image11.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image12.jpeg" class="lightbox" data-src="assets/docx/image12.jpeg">
+    <img loading="lazy" src="assets/docx/image12.jpeg" alt="image12.jpeg">
+  </a>
+  <figcaption>image12.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image13.jpeg" class="lightbox" data-src="assets/docx/image13.jpeg">
+    <img loading="lazy" src="assets/docx/image13.jpeg" alt="image13.jpeg">
+  </a>
+  <figcaption>image13.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image14.jpeg" class="lightbox" data-src="assets/docx/image14.jpeg">
+    <img loading="lazy" src="assets/docx/image14.jpeg" alt="image14.jpeg">
+  </a>
+  <figcaption>image14.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image15.jpeg" class="lightbox" data-src="assets/docx/image15.jpeg">
+    <img loading="lazy" src="assets/docx/image15.jpeg" alt="image15.jpeg">
+  </a>
+  <figcaption>image15.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image16.jpeg" class="lightbox" data-src="assets/docx/image16.jpeg">
+    <img loading="lazy" src="assets/docx/image16.jpeg" alt="image16.jpeg">
+  </a>
+  <figcaption>image16.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image17.jpeg" class="lightbox" data-src="assets/docx/image17.jpeg">
+    <img loading="lazy" src="assets/docx/image17.jpeg" alt="image17.jpeg">
+  </a>
+  <figcaption>image17.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image18.jpeg" class="lightbox" data-src="assets/docx/image18.jpeg">
+    <img loading="lazy" src="assets/docx/image18.jpeg" alt="image18.jpeg">
+  </a>
+  <figcaption>image18.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image19.jpeg" class="lightbox" data-src="assets/docx/image19.jpeg">
+    <img loading="lazy" src="assets/docx/image19.jpeg" alt="image19.jpeg">
+  </a>
+  <figcaption>image19.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image2.jpeg" class="lightbox" data-src="assets/docx/image2.jpeg">
+    <img loading="lazy" src="assets/docx/image2.jpeg" alt="image2.jpeg">
+  </a>
+  <figcaption>image2.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image20.jpeg" class="lightbox" data-src="assets/docx/image20.jpeg">
+    <img loading="lazy" src="assets/docx/image20.jpeg" alt="image20.jpeg">
+  </a>
+  <figcaption>image20.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image21.jpeg" class="lightbox" data-src="assets/docx/image21.jpeg">
+    <img loading="lazy" src="assets/docx/image21.jpeg" alt="image21.jpeg">
+  </a>
+  <figcaption>image21.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image22.jpeg" class="lightbox" data-src="assets/docx/image22.jpeg">
+    <img loading="lazy" src="assets/docx/image22.jpeg" alt="image22.jpeg">
+  </a>
+  <figcaption>image22.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image23.jpeg" class="lightbox" data-src="assets/docx/image23.jpeg">
+    <img loading="lazy" src="assets/docx/image23.jpeg" alt="image23.jpeg">
+  </a>
+  <figcaption>image23.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image24.jpeg" class="lightbox" data-src="assets/docx/image24.jpeg">
+    <img loading="lazy" src="assets/docx/image24.jpeg" alt="image24.jpeg">
+  </a>
+  <figcaption>image24.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image25.jpeg" class="lightbox" data-src="assets/docx/image25.jpeg">
+    <img loading="lazy" src="assets/docx/image25.jpeg" alt="image25.jpeg">
+  </a>
+  <figcaption>image25.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image3.jpeg" class="lightbox" data-src="assets/docx/image3.jpeg">
+    <img loading="lazy" src="assets/docx/image3.jpeg" alt="image3.jpeg">
+  </a>
+  <figcaption>image3.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image4.jpeg" class="lightbox" data-src="assets/docx/image4.jpeg">
+    <img loading="lazy" src="assets/docx/image4.jpeg" alt="image4.jpeg">
+  </a>
+  <figcaption>image4.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image5.jpeg" class="lightbox" data-src="assets/docx/image5.jpeg">
+    <img loading="lazy" src="assets/docx/image5.jpeg" alt="image5.jpeg">
+  </a>
+  <figcaption>image5.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image6.jpeg" class="lightbox" data-src="assets/docx/image6.jpeg">
+    <img loading="lazy" src="assets/docx/image6.jpeg" alt="image6.jpeg">
+  </a>
+  <figcaption>image6.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image7.jpeg" class="lightbox" data-src="assets/docx/image7.jpeg">
+    <img loading="lazy" src="assets/docx/image7.jpeg" alt="image7.jpeg">
+  </a>
+  <figcaption>image7.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image8.jpeg" class="lightbox" data-src="assets/docx/image8.jpeg">
+    <img loading="lazy" src="assets/docx/image8.jpeg" alt="image8.jpeg">
+  </a>
+  <figcaption>image8.jpeg</figcaption>
+</figure>
+<figure class="g-item">
+  <a href="assets/docx/image9.jpeg" class="lightbox" data-src="assets/docx/image9.jpeg">
+    <img loading="lazy" src="assets/docx/image9.jpeg" alt="image9.jpeg">
+  </a>
+  <figcaption>image9.jpeg</figcaption>
+</figure>
+        </div>
+      </section>
+
+      <p class="footer-note">Vygenerováno z dodaného DOCX a archivu fotografií.</p>
+    </div>
+  </main>
+</div>
+
+<div id="lb" aria-hidden="true">
+  <button id="lbClose" aria-label="Zavřít">Zavřít ✕</button>
+  <img id="lbImg" alt="">
+  <div class="hint">Esc / klik mimo fotku = zavřít</div>
+</div>
+
+<script>
+(function() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggleBtn');
+
+  function syncToggle() {
+    if (window.matchMedia('(max-width: 920px)').matches) {
+      toggleBtn.style.display = 'inline-flex';
+    } else {
+      toggleBtn.style.display = 'none';
+      sidebar.classList.remove('open');
+    }
+  }
+  window.addEventListener('resize', syncToggle);
+  syncToggle();
+
+  toggleBtn?.addEventListener('click', () => sidebar.classList.toggle('open'));
+  document.addEventListener('click', (e) => {
+    if (!window.matchMedia('(max-width: 920px)').matches) return;
+    if (sidebar.classList.contains('open')) {
+      const inSidebar = sidebar.contains(e.target);
+      const inToggle = toggleBtn.contains(e.target);
+      if (!inSidebar && !inToggle) sidebar.classList.remove('open');
+    }
+  });
+
+  const links = Array.from(document.querySelectorAll('.nav-link'));
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const sects = Array.from(document.querySelectorAll('section[id]'));
+  const obs = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+    if (!visible) return;
+    links.forEach(a => a.classList.remove('active'));
+    const id = visible.target.id;
+    const a = map.get(id);
+    if (a) a.classList.add('active');
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: [0.05, 0.15, 0.3, 0.6] });
+  sects.forEach(s => obs.observe(s));
+
+  const lb = document.getElementById('lb');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+
+  function openLB(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+  }
+  function closeLB() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('a.lightbox').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = a.getAttribute('data-src');
+      const img = a.querySelector('img');
+      openLB(src, img?.alt || '');
+    });
+  });
+  lbClose.addEventListener('click', closeLB);
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLB(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLB(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kroniky Damnic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --accent: #8c6b4f;
+    --bg: #f7f6f3;
+    --nav-bg: #ebe7df;
+    --text: #2c2c2c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 55vh;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper {
+    display: flex;
+    min-height: 60vh;
+}
+
+nav {
+    width: 260px;
+    background: var(--nav-bg);
+    padding: 40px 25px;
+}
+
+nav h3 {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a {
+    display: block;
+    margin: 14px 0;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+main {
+    flex: 1;
+    padding: 60px 60px;
+    background: white;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+/* EDITOVATELNÝ BLOK */
+.content-editable {
+    max-width: 800px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    background: #e0dbd2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    main {
+        padding: 40px 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <img src="hanak_image5.jpeg" alt="Historická fotografie Damnic">
+    <div class="hero-text">
+        <h1>Kroniky Damnic</h1>
+        <p>Historie, vzpomínky a souvislosti</p>
+    </div>
+</section>
+
+<div class="wrapper">
+
+<nav>
+    <h3>Co chcete číst</h3>
+    <a href="kronika_hanak/index.html" target="_blank">Hanákova kronika</a>
+    <a href="kronika_wieder/index.html"target="_blank">Wiederova kronika</a>
+    <a href="vzpominky/index.html"target="_blank">Vzpomínky</a>
+</nav>
+
+<main>
+    <div class="content-editable">
+
+        <!-- ZDE MŮŽETE LIBOVOLNĚ DOPLŇOVAT TEXT -->
+
+        <h2>Úvod</h2>
+
+        <p>
+       Zde jsou texty k historii Damnic, které se podařilo shromáždit. Obsah textů není nijak upravovaný, některé se tedy io opakují a v několika částech překrývají. Pokud se to podařilo zjistit, je uveden původní zdroj a autor, resp. autor překladu, případně i komentáře toho, kdo zdroj našel a poskytl k této prezentaci. Původní texty jsou převedeny do podoby tohoto webu s pomocí AI (konkrétně chat-GPT). 
+
+        </p>
+
+        <p>
+        prompty zadával jokr
+        </p>
+
+    </div>
+</main>
+
+</div>
+
+<footer>
+    © Kroniky Damnic
+</footer>
+
+</body>
+</html>

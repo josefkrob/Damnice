@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotogalerie kroniky</title>
+  <style>
+    :root {
+      --paper: #efe6d3;
+      --paper-dark: #e2d3b6;
+      --ink: #2f2418;
+      --muted: #6a5846;
+      --accent: #8a6a3f;
+      --accent-dark: #5f4525;
+      --frame: #a88958;
+      --shadow: rgba(35, 24, 14, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(90, 60, 25, 0.08), transparent 24%),
+        linear-gradient(180deg, #f4ecd9 0%, #eadcc1 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(120, 90, 55, 0.04), rgba(120, 90, 55, 0.04)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      opacity: 0.55;
+      mix-blend-mode: multiply;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.08)), var(--paper);
+      border: 1px solid rgba(122, 92, 56, 0.22);
+      border-radius: 22px;
+      padding: 36px 28px 28px;
+      box-shadow: 0 18px 40px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(138, 106, 63, 0.22);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.08;
+      font-weight: 700;
+    }
+
+    .lead {
+      max-width: 780px;
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 16px 0 0;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 26px 0 24px;
+      padding: 16px 18px;
+      background: rgba(255, 250, 240, 0.78);
+      border: 1px solid rgba(138, 106, 63, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(60, 45, 24, 0.08);
+      backdrop-filter: blur(3px);
+    }
+
+    .toolbar-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .toolbar-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .chip {
+      border: 1px solid rgba(138, 106, 63, 0.25);
+      background: #f8f1e3;
+      color: var(--accent-dark);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: 0.25s ease;
+      font-family: inherit;
+    }
+
+    .chip:hover,
+    .chip.active {
+      background: var(--accent);
+      color: #fff8ed;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #f7f0e2 0%, #f0e4cc 100%);
+      border-radius: 10px;
+      padding: 14px 14px 18px;
+      box-shadow: 0 12px 28px rgba(45, 30, 14, 0.14);
+      border: 1px solid rgba(120, 85, 44, 0.18);
+      transform: rotate(var(--tilt, 0deg));
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      position: relative;
+    }
+
+    .card:nth-child(3n) { --tilt: -0.9deg; }
+    .card:nth-child(3n+1) { --tilt: 0.7deg; }
+    .card:nth-child(3n+2) { --tilt: -0.35deg; }
+
+    .card:hover {
+      transform: translateY(-6px) rotate(0deg);
+      box-shadow: 0 20px 40px rgba(45, 30, 14, 0.2);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 18px;
+      background: rgba(255, 248, 225, 0.55);
+      border: 1px solid rgba(160, 145, 116, 0.22);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    .thumb-wrap {
+      display: block;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #d5c2a0;
+      border: 10px solid #fffaf2;
+      box-shadow: inset 0 0 0 1px rgba(107, 79, 43, 0.14);
+      cursor: pointer;
+    }
+
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: sepia(0.18) contrast(1.03);
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover .thumb-wrap img {
+      transform: scale(1.04);
+    }
+
+    .caption {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .caption strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .caption span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.95rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 14, 8, 0.88);
+      padding: 26px;
+      z-index: 1000;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      max-width: min(1100px, 96vw);
+      max-height: 92vh;
+      width: 100%;
+      background: #f4ead6;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 26px 60px rgba(0,0,0,0.3);
+      border: 1px solid rgba(168, 137, 88, 0.35);
+      position: relative;
+    }
+
+    .lightbox-inner img {
+      width: 100%;
+      max-height: 74vh;
+      object-fit: contain;
+      display: block;
+      background: #ead9b6;
+      border-radius: 10px;
+    }
+
+    .lightbox-caption {
+      padding: 12px 6px 2px;
+      text-align: center;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border: none;
+      background: rgba(84, 58, 27, 0.9);
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding-inline: 14px;
+      }
+
+      .hero {
+        padding: 28px 18px 22px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .toolbar {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">Rodinná kronika</div>
+      <h1>Fotogalerie vzpomínek</h1>
+      <p class="lead">
+        Historicky laděná galerie pro kroniku, staré fotografie a rodinné či obecní vzpomínky.
+        Vzhled připomíná album s nalepenými snímky na zažloutlém papíře. Stačí jen měnit názvy souborů,
+        popisky a případně přidávat další položky.
+      </p>
+    </section>
+
+    <section class="toolbar" aria-label="Ovládání galerie">
+      <div class="toolbar-left">
+        <button class="chip active" data-filter="all">Všechny snímky</button>
+        <button class="chip" data-filter="rodina">Rodina</button>
+        <button class="chip" data-filter="obec">Obec a dům</button>
+        <button class="chip" data-filter="skola">Škola a děti</button>
+        <button class="chip" data-filter="koupaliste">Koupaliště a volný čas</button>
+      </div>
+      <div class="toolbar-note">Kliknutím na fotografii ji otevřete ve větším náhledu.</div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0004.jpg" data-caption="Dvě mladé ženy před domem">
+          <img src="IMG-20260301-WA0004.jpg" alt="Dvě mladé ženy před domem" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Dvě mladé ženy před domem</strong>
+          <span>Portrétní snímek s přirozenou domácí atmosférou.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0005.jpg" data-caption="Děvčátko s mužem na ulici">
+          <img src="IMG-20260301-WA0005.jpg" alt="Děvčátko s mužem na ulici" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Děvčátko s mužem</strong>
+          <span>Rodinný moment zachycený před stavením.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0006.jpg" data-caption="Žena s dítětem v zahradě">
+          <img src="IMG-20260301-WA0006.jpg" alt="Žena s dítětem v zahradě" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>V zahradě</strong>
+          <span>Jednoduchý snímek s jemně dokumentární náladou.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="skola">
+        <a class="thumb-wrap" href="IMG-20260301-WA0007.jpg" data-caption="Dvě děti před domem">
+          <img src="IMG-20260301-WA0007.jpg" alt="Dvě děti před domem" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Dvě děti</strong>
+          <span>Dětský snímek s typickou kompozicí domácího alba.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="koupaliste">
+        <a class="thumb-wrap" href="IMG-20260301-WA0008.jpg" data-caption="Dvě dívky u koupaliště nebo parku">
+          <img src="IMG-20260301-WA0008.jpg" alt="Dvě dívky u koupaliště nebo parku" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>U vody a trávy</strong>
+          <span>Volný čas a klidná atmosféra dávného léta.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0009.jpg" data-caption="Motocykl a dvojice lidí">
+          <img src="IMG-20260301-WA0009.jpg" alt="Motocykl a dvojice lidí" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Na motorce</strong>
+          <span>Živý, radostný snímek s pohybem a tehdejší elegancí.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0010.jpg" data-caption="Žena stojící před domem v zimním období">
+          <img src="IMG-20260301-WA0010.jpg" alt="Žena stojící před domem" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Před stavením</strong>
+          <span>Portrét všedního dne na návsi či ve dvoře.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260301-WA0011.jpg" data-caption="Koláž starších rodinných fotografií">
+          <img src="IMG-20260301-WA0011.jpg" alt="Koláž starších rodinných fotografií" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Koláž vzpomínek</strong>
+          <span>Více okamžiků pohromadě jako ve skutečném albu.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="koupaliste">
+        <a class="thumb-wrap" href="IMG-20260301-WA0012.jpg" data-caption="Skupina lidí u bazénu">
+          <img src="IMG-20260301-WA0012.jpg" alt="Skupina lidí u bazénu" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Letní koupání</strong>
+          <span>Společný snímek s neformální a veselou náladou.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="skola">
+        <a class="thumb-wrap" href="IMG-20260301-WA0013.jpg" data-caption="Starší školní fotografie třídy">
+          <img src="IMG-20260301-WA0013.jpg" alt="Starší školní fotografie třídy" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Školní třída</strong>
+          <span>Cenný dokument školního života a místní paměti.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="koupaliste">
+        <a class="thumb-wrap" href="IMG-20260301-WA0014.jpg" data-caption="Lidé u prázdného bazénu">
+          <img src="IMG-20260301-WA0014.jpg" alt="Lidé u prázdného bazénu" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>U bazénu</strong>
+          <span>Prostor, který dnes působí téměř jako ztracené místo.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="obec">
+        <a class="thumb-wrap" href="IMG-20260227-WA0000.jpg" data-caption="Modrý dům u cesty">
+          <img src="IMG-20260227-WA0000.jpg" alt="Modrý dům u cesty" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Modrý dům</strong>
+          <span>Samostatný záběr stavby s tichou venkovskou atmosférou.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="obec">
+        <a class="thumb-wrap" href="IMG-20260227-WA0001.jpg" data-caption="Pohled do ulice s domy">
+          <img src="IMG-20260227-WA0001.jpg" alt="Pohled do ulice s domy" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Ulička s domy</strong>
+          <span>Dokument místa, které si zaslouží paměť i příběh.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260227-WA0002.jpg" data-caption="Muž a dítě v tmavším interiéru či sklepu">
+          <img src="IMG-20260227-WA0002.jpg" alt="Muž a dítě v tmavším prostoru" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Ve sklepě či v podzemí</strong>
+          <span>Záběr s výraznou dokumentární a téměř filmovou náladou.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260227-WA0003.jpg" data-caption="Starší muž v čepici">
+          <img src="IMG-20260227-WA0003.jpg" alt="Starší muž v čepici" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Portrét muže</strong>
+          <span>Silná tvář a přímý pohled jako z ústní historie.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="obec">
+        <a class="thumb-wrap" href="IMG-20260227-WA0004.jpg" data-caption="Muž u kamenné stěny">
+          <img src="IMG-20260227-WA0004.jpg" alt="Muž u kamenné stěny" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>U kamenné zdi</strong>
+          <span>Moment z prostředí, které může patřit ke sklepu či starému domu.</span>
+        </div>
+      </article>
+
+      <article class="card" data-category="rodina">
+        <a class="thumb-wrap" href="IMG-20260227-WA0005.jpg" data-caption="Usmívající se starší muž">
+          <img src="IMG-20260227-WA0005.jpg" alt="Usmívající se starší muž" loading="lazy">
+        </a>
+        <div class="caption">
+          <strong>Úsměv na závěr</strong>
+          <span>Fotografie, která působí jako tiché uzavření celé série.</span>
+        </div>
+      </article>
+    </section>
+
+    <p class="footer-note">Tip: popisky si můžete snadno upravit přímo v kódu u jednotlivých položek galerie.</p>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="close-btn" id="closeBtn" aria-label="Zavřít">×</button>
+      <img id="lightboxImg" src="" alt="Zvětšený náhled fotografie">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('closeBtn');
+    const triggers = document.querySelectorAll('.thumb-wrap');
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card');
+
+    triggers.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightboxImg.src = link.getAttribute('href');
+        lightboxCaption.textContent = link.dataset.caption || '';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      lightboxCaption.textContent = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.dataset.filter;
+
+        cards.forEach(card => {
+          const category = card.dataset.category;
+          const visible = filter === 'all' || category === filter;
+          card.style.display = visible ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

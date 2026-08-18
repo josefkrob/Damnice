@@ -5,90 +5,30 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Vinařské puzzle</title>
 <style>
-:root{--bg:#17120d;--panel:#241a12;--paper:#ead8ae;--ink:#33261a;--light:#fff8e9;--accent:#9d6f3c;--ok:#567c36}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--light);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}body{min-height:100vh}.wrap{width:min(100vw,1450px);margin:auto;padding-bottom:22px}.bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;background:rgba(36,26,18,.96);backdrop-filter:blur(8px);box-shadow:0 3px 16px #0006}.title{font-weight:800}.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.ctrl,select{font:inherit;border:1px solid #ffffff44;border-radius:999px;padding:7px 11px;background:#ffffff12;color:#fff}.ctrl{cursor:pointer}.ctrl:hover{background:#ffffff20}select option{color:#111}.status{font-weight:750;font-variant-numeric:tabular-nums}.stage{padding:14px}.board-wrap{position:relative;margin:auto;width:min(100%,1200px);aspect-ratio:1844/715;border:2px solid #ffffff55;border-radius:12px;overflow:hidden;box-shadow:0 14px 45px #0008;background:#2b2119}.board{position:absolute;inset:0;display:grid;gap:2px;background:#17120d}.piece{position:relative;border:0;padding:0;margin:0;background-image:url('../hidden-object/scene.jpg');background-repeat:no-repeat;cursor:pointer;touch-action:manipulation;transition:transform .12s ease,box-shadow .12s ease,opacity .12s ease}.piece:hover{z-index:4;box-shadow:0 0 0 2px #fff inset}.piece.selected{z-index:5;box-shadow:0 0 0 4px #f1d48d inset;transform:scale(.98)}.piece.correct::after{content:'✓';position:absolute;right:5px;top:5px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#567c36dd;color:white;font-weight:800;font-size:15px;box-shadow:0 2px 8px #0006}.piece.dragging{opacity:.55}.help{margin:0 auto 14px;width:min(calc(100% - 28px),1200px);background:var(--paper);color:var(--ink);padding:12px 14px;border-radius:10px;line-height:1.35}.help strong{font-family:Georgia,serif}.done{position:absolute;inset:0;display:none;place-items:center;background:#0008;z-index:20}.done-card{background:#241a12;border:1px solid #ffffff44;border-radius:18px;padding:22px 28px;text-align:center;box-shadow:0 18px 60px #000a}.done-card h2{margin:.1em 0 .4em}.preview{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:#000c;padding:20px}.preview img{max-width:95vw;max-height:90vh;border-radius:12px;box-shadow:0 18px 60px #000}.preview.show{display:grid}.preview button{position:absolute;top:18px;right:18px}.footer{padding:0 14px;text-align:center;color:#ffffffaa;font-size:13px}@media(max-width:700px){.title{width:100%}.bar{align-items:flex-start}.controls{width:100%}.ctrl,select{font-size:13px;padding:6px 9px}.stage{padding:8px}.piece.correct::after{width:18px;height:18px;font-size:11px;right:3px;top:3px}.help{width:calc(100% - 16px);font-size:13px}}
+:root{--bg:#17120d;--panel:#241a12;--paper:#ead8ae;--ink:#33261a;--light:#fff8e9;--ok:#567c36}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--light);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}body{min-height:100vh}.wrap{width:min(100vw,1450px);margin:auto;padding-bottom:22px}.bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;background:rgba(36,26,18,.96);backdrop-filter:blur(8px);box-shadow:0 3px 16px #0006}.title{font-weight:800}.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.ctrl,select{font:inherit;border:1px solid #ffffff44;border-radius:999px;padding:7px 11px;background:#ffffff12;color:#fff}.ctrl{cursor:pointer}select option{color:#111}.status{font-weight:750}.stage{padding:14px}.board-wrap{position:relative;margin:auto;width:min(100%,1200px);aspect-ratio:1844/715;border:2px solid #ffffff55;border-radius:12px;overflow:hidden;box-shadow:0 14px 45px #0008;background:#2b2119}.board{position:absolute;inset:0;display:grid;gap:2px;background:#17120d}.piece{position:relative;border:0;padding:0;margin:0;background-repeat:no-repeat;cursor:pointer;touch-action:manipulation;transition:transform .12s ease,box-shadow .12s ease,opacity .12s ease}.piece:hover{z-index:4;box-shadow:0 0 0 2px #fff inset}.piece.selected{z-index:5;box-shadow:0 0 0 4px #f1d48d inset;transform:scale(.98)}.piece.correct::after{content:'✓';position:absolute;right:5px;top:5px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#567c36dd;color:white;font-weight:800;font-size:15px}.help{margin:0 auto 14px;width:min(calc(100% - 28px),1200px);background:var(--paper);color:var(--ink);padding:12px 14px;border-radius:10px;line-height:1.35}.done{position:absolute;inset:0;display:none;place-items:center;background:#0008;z-index:20}.done-card{background:#241a12;border:1px solid #ffffff44;border-radius:18px;padding:22px 28px;text-align:center}.preview{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:#000c;padding:20px}.preview img{max-width:95vw;max-height:90vh;border-radius:12px;box-shadow:0 18px 60px #000}.preview.show{display:grid}.preview button{position:absolute;top:18px;right:18px}.error{display:none;padding:18px;color:#fff;background:#8b2e2e;text-align:center;line-height:1.4}@media(max-width:700px){.title{width:100%}.controls{width:100%}.ctrl,select{font-size:13px}.stage{padding:8px}.help{width:calc(100% - 16px);font-size:13px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="bar">
-    <div class="title">Vinařské puzzle</div>
-    <div class="controls">
-      <label>Obtížnost <select id="difficulty"><option value="3x2">6 dílků</option><option value="4x3" selected>12 dílků</option><option value="5x4">20 dílků</option><option value="6x4">24 dílků</option><option value="8x5">40 dílků</option></select></label>
-      <span class="status" id="status">Správně: 0 / 12</span>
-      <button class="ctrl" id="previewBtn" type="button">Ukázat předlohu</button>
-      <button class="ctrl" id="shuffleBtn" type="button">Promíchat</button>
-    </div>
-  </div>
-
-  <div class="stage">
-    <div class="board-wrap" id="boardWrap">
-      <div class="board" id="board"></div>
-      <div class="done" id="done"><div class="done-card"><h2>Hotovo! 🍷</h2><p>Puzzle je správně složené.</p><button class="ctrl" id="again" type="button">Hrát znovu</button></div></div>
-    </div>
-  </div>
-
-  <div class="help"><strong>Jak hrát:</strong> klikněte na jeden dílek a potom na druhý — prohodí se. Na počítači lze dílky také přetahovat myší. Zelená fajfka označuje dílek, který už je na správném místě.</div>
-  <div class="footer">Obrázek se načítá z vinařské hidden-object scény.</div>
+<div class="bar"><div class="title">Vinařské puzzle</div><div class="controls"><label>Obtížnost <select id="difficulty"><option value="3x2">6 dílků</option><option value="4x3" selected>12 dílků</option><option value="5x4">20 dílků</option><option value="6x4">24 dílků</option><option value="8x5">40 dílků</option></select></label><span class="status" id="status">Správně: 0 / 12</span><button class="ctrl" id="previewBtn" type="button">Ukázat předlohu</button><button class="ctrl" id="shuffleBtn" type="button">Promíchat</button></div></div>
+<div class="stage"><div class="board-wrap" id="boardWrap"><div class="board" id="board"></div><div class="done" id="done"><div class="done-card"><h2>Hotovo! 🍷</h2><p>Puzzle je správně složené.</p><button class="ctrl" id="again" type="button">Hrát znovu</button></div></div></div><div class="error" id="error">Obrázek se nepodařilo načíst.</div></div>
+<div class="help"><strong>Jak hrát:</strong> klikněte na jeden dílek a potom na druhý — prohodí se. Zelená fajfka označuje správně umístěný dílek.</div>
 </div>
-
-<div class="preview" id="preview"><button class="ctrl" id="closePreview">Zavřít</button><img src="../hidden-object/scene.jpg" alt="Předloha puzzle"></div>
-
+<div class="preview" id="preview"><button class="ctrl" id="closePreview">Zavřít</button><img id="previewImg" alt="Předloha puzzle"></div>
 <script>
-const IMAGE='../hidden-object/scene.jpg';
-const board=document.getElementById('board');
-const boardWrap=document.getElementById('boardWrap');
-const statusEl=document.getElementById('status');
-const difficulty=document.getElementById('difficulty');
-const done=document.getElementById('done');
-const preview=document.getElementById('preview');
-let cols=4,rows=3,order=[],selected=null,dragFrom=null;
-
+const IMAGE='/Damnice/hidden-object/scene.jpg?v=3';
+const board=document.getElementById('board'),boardWrap=document.getElementById('boardWrap'),statusEl=document.getElementById('status'),difficulty=document.getElementById('difficulty'),done=document.getElementById('done'),preview=document.getElementById('preview'),previewImg=document.getElementById('previewImg'),errorBox=document.getElementById('error');
+let cols=4,rows=3,order=[],selected=null;
 function parseDifficulty(){[cols,rows]=difficulty.value.split('x').map(Number)}
 function shuffled(n){const a=[...Array(n).keys()];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}if(a.every((v,i)=>v===i)&&a.length>1)[a[0],a[1]]=[a[1],a[0]];return a}
 function correctCount(){return order.reduce((n,v,i)=>n+(v===i),0)}
 function updateStatus(){const c=correctCount();statusEl.textContent=`Správně: ${c} / ${order.length}`;done.style.display=c===order.length?'grid':'none'}
-
-function render(){
-  board.innerHTML='';
-  board.style.gridTemplateColumns=`repeat(${cols},1fr)`;
-  board.style.gridTemplateRows=`repeat(${rows},1fr)`;
-  const rect=boardWrap.getBoundingClientRect();
-  const bw=rect.width,bh=rect.height;
-  order.forEach((pieceIndex,pos)=>{
-    const p=document.createElement('button');
-    p.type='button';p.className='piece';p.draggable=true;p.dataset.pos=pos;
-    const srcCol=pieceIndex%cols,srcRow=Math.floor(pieceIndex/cols);
-    p.style.backgroundSize=`${bw}px ${bh}px`;
-    p.style.backgroundPosition=`${-srcCol*(bw/cols)}px ${-srcRow*(bh/rows)}px`;
-    if(pieceIndex===pos)p.classList.add('correct');
-    p.addEventListener('click',()=>selectOrSwap(pos));
-    p.addEventListener('dragstart',e=>{dragFrom=pos;p.classList.add('dragging');e.dataTransfer.effectAllowed='move'});
-    p.addEventListener('dragend',()=>{dragFrom=null;p.classList.remove('dragging')});
-    p.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move'});
-    p.addEventListener('drop',e=>{e.preventDefault();if(dragFrom!==null&&dragFrom!==pos)swap(dragFrom,pos)});
-    board.appendChild(p);
-  });
-  updateStatus();
-}
-
-function selectOrSwap(pos){
-  if(selected===null){selected=pos;board.children[pos].classList.add('selected');return}
-  if(selected===pos){board.children[pos].classList.remove('selected');selected=null;return}
-  swap(selected,pos);selected=null;
-}
+function render(){board.innerHTML='';board.style.gridTemplateColumns=`repeat(${cols},1fr)`;board.style.gridTemplateRows=`repeat(${rows},1fr)`;const bw=board.clientWidth,bh=board.clientHeight;order.forEach((pieceIndex,pos)=>{const p=document.createElement('button');p.type='button';p.className='piece';const sc=pieceIndex%cols,sr=Math.floor(pieceIndex/cols);p.style.backgroundImage=`url("${IMAGE}")`;p.style.backgroundSize=`${bw}px ${bh}px`;p.style.backgroundPosition=`${-sc*(bw/cols)}px ${-sr*(bh/rows)}px`;if(pieceIndex===pos)p.classList.add('correct');p.onclick=()=>selectOrSwap(pos);board.appendChild(p)});updateStatus()}
+function selectOrSwap(pos){if(selected===null){selected=pos;board.children[pos].classList.add('selected');return}if(selected===pos){board.children[pos].classList.remove('selected');selected=null;return}swap(selected,pos)}
 function swap(a,b){[order[a],order[b]]=[order[b],order[a]];selected=null;render()}
 function newGame(){parseDifficulty();order=shuffled(cols*rows);selected=null;render()}
-
-window.addEventListener('resize',()=>render());
-difficulty.addEventListener('change',newGame);
-document.getElementById('shuffleBtn').addEventListener('click',newGame);
-document.getElementById('again').addEventListener('click',newGame);
-document.getElementById('previewBtn').addEventListener('click',()=>preview.classList.add('show'));
-document.getElementById('closePreview').addEventListener('click',()=>preview.classList.remove('show'));
-preview.addEventListener('click',e=>{if(e.target===preview)preview.classList.remove('show')});
-
-const img=new Image();img.src=IMAGE;img.onload=newGame;img.onerror=()=>{board.innerHTML='<div style="padding:20px;line-height:1.4;color:white">Obrázek se nepodařilo načíst.</div>'};
+const img=new Image();img.onload=()=>{errorBox.style.display='none';previewImg.src=IMAGE;newGame()};img.onerror=()=>{errorBox.style.display='block'};img.src=IMAGE;
+window.addEventListener('resize',()=>{if(order.length)render()});difficulty.onchange=newGame;document.getElementById('shuffleBtn').onclick=newGame;document.getElementById('again').onclick=newGame;document.getElementById('previewBtn').onclick=()=>preview.classList.add('show');document.getElementById('closePreview').onclick=()=>preview.classList.remove('show');preview.onclick=e=>{if(e.target===preview)preview.classList.remove('show')};
 </script>
-</body>
-</html>
+</body></html>
